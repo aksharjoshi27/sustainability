@@ -1,4 +1,4 @@
-# Retail DREAM Demo in a Box Setup Guide
+# Sustainability DREAM Demo in a Box Setup Guide
 
 ## What is it?
 DREAM Demos in a Box (DDiB) are packaged Industry Scenario DREAM Demos with ARM templates (with a demo web app, Power BI reports, Synapse resources, AML Notebooks etc.) that can be deployed in a customer’s subscription using the CAPE tool in a few hours.  Partners can also deploy DREAM Demos in their own subscriptions using DDiB.
@@ -69,7 +69,7 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 * Please ensure that you select the correct resource group name. We have given a sample name which may need to be changed should any resource group with the same name already exist in your subscription.
 * The audience for this document is CSAs and GBBs.
 * Please log in to Azure and Power BI using the same credentials.
-* Once the resources have been setup, please ensure that your AD user and synapse workspace have “Storage Blob Data Owner” role assigned on storage account name starting with “stretail”. You need to contact AD admin to get this done.
+* Once the resources have been setup, please ensure that your AD user and synapse workspace have “Storage Blob Data Owner” role assigned on storage account name starting with “stsustainability”. You need to contact AD admin to get this done.
 * Please review the [License Agreement](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/main/CDP-Retail/license.md) before proceeding.
 
 ## Before starting
@@ -90,7 +90,7 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 
 	![A portion of the Azure Portal home screen is displayed with Create Resource Group tile](media/resource-group-2.png)
 	
-5. On the 'Create a resource group' screen, **select** your desired Subscription. For Resource group, **type** 'DDiB-Retail-Lab'. 
+5. On the 'Create a resource group' screen, **select** your desired Subscription. For Resource group, **type** 'DDiB-Sustainability-Lab'. 
 
 6. **Select** your desired region.
 
@@ -120,7 +120,7 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 
 	![Create Power BI Workspace.](media/power-bi-2.png)
 
-	> **Note:** Please create a Workspace by the name "DDiB-Retail".
+	> **Note:** Please create a Workspace by the name "DDiB-Sustainability".
 
 5. **Copy** the Workspace GUID or ID. You can get this by browsing to [https://app.powerbi.com/](https://app.powerbi.com/), selecting the workspace, and then copying the GUID 	from the address URL.
 
@@ -144,33 +144,33 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 
 	![Switch Historical data analysis on.](media/power-bi-6.png)
 
-11. **Enter** ‘Tax Collection Realtime’ as dataset name and **enter** the column names in “values from stream” option from list below  and **click** on create button: 
+11. **Enter** ‘Realtime Air Quality API’ as dataset name and **enter** the column names in “values from stream” option from list below  and **click** on create button: 
 
 	| Field Name                        | Type     |
 	|-----------------------------------|----------|
-	| VATBefore 						| number   |
-	| VATMid  							| number   |
-	| VATAfter  						| number   |
-	| TaxPayerSatisfactionBefore  		| number   |
-	| TaxPayerSatisfactionMid  			| number   |
-	| TaxPayerSatisfactionAfter  		| number   |
-	| TaxpayersBefore  					| number   |
-	| TaxpayersMid  					| number   |
-	| TaxpayersAfter  					| number   |
-	| RecordedOn  						| datetime |
-	| VATMax  							| number   |
-	| TaxPayerSatisfactionTarget  		| number   |
-	| TaxPayerSatisfactionMax  			| number   |
-	| VATTargetBefore 				 	| number   |
-	| VATTargetMid					  	| number   |
-	| VATTargetAfter  					| number   |
-	| TaxpayersTargetBefore 		  	| number   |
+	| mean_PM25 						| number   |
+	| mean_PM1  							| number   |
+	| mean_PM10  						| number   |
+	| mean_AQI  		| number   |
+	| ReadingDateTimeUTC  			| datetime   |
+	| mean_AQI_Target  		| number   |
+	| mean_PM1_Target  					| number   |
+	| mean_PM10_Target  					| number   |
+	| mean_PM25_Target  					| number   |
+	| mean_AQI_before  						| number |
+	| mean_PM1_before  							| number   |
+	| mean_PM10_before  		| number   |
+	| mean_PM25_before  			| number   |
+	| mean_AQI_mid 				 	| number   |
+	| mean_PM1_mid					  	| number   |
+	| mean_PM10_mid  					| number   |
+	| mean_PM25_mid 		  	| number   |
 	| TaxpayersTargetMid  				| number   |
 	| TaxpayersTargetAfter				| number   |
 	
 	![Create new streaming dataset.](media/power-bi-7.png)
 
-12. **Copy** the push url of dataset ‘Tax Collection Realtime’ and place it in a notepad for later use.
+12. **Copy** the push url of dataset ‘Realtime Air Quality API’ and place it in a notepad for later use.
 
 	![Provide the Push Url.](media/power-bi-8.png)
 
@@ -184,7 +184,7 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 
 2. On the Custom deployment form, **select** your desired Subscription.
 
-3. **Select** the resource group name **DDiB-Retail-Lab** which you created in [Task 1](#task-1-create-a-resource-group-in-azure).
+3. **Select** the resource group name **DDiB-Sustainability-Lab** which you created in [Task 1](#task-1-create-a-resource-group-in-azure).
 
 4. **Provide/Type** an environment code which is unique to your environment. This code is a suffix to your environment and should not have any special characters or uppercase letters and should not be more than 6 characters. 
 
@@ -192,7 +192,7 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 
 6. **Enter** the Power BI workspace ID created in [Task 2](#task-2-power-bi-workspace-creation).
 
-7. **Enter** the power BI streaming dataset url for **Tax Collection Realtime dataset** you copied in step 12 of [Task 2](#task-2-power-bi-workspace-creation).
+7. **Enter** the power BI streaming dataset url for **Realtime Air Quality API** you copied in step 12 of [Task 2](#task-2-power-bi-workspace-creation).
 
 8. **Click** ‘Review + Create’ button.
 
@@ -240,24 +240,24 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 4. In the Azure Cloud Shell window, ensure the PowerShell environment is selected and **enter** the following command to clone the repository files.
 Command:
 ```
-git clone -b retail https://github.com/microsoft/Azure-Analytics-and-AI-Engagement.git retail
+git clone -b sustainability https://github.com/microsoft/Azure-Analytics-and-AI-Engagement.git sustainability
 ```
 
 ![Git Clone Command to Pull Down the demo Repository.](media/cloud-shell-4.png)
 	
-> **Note:** If you get File already exist error, please execute following command: rm retail -r -f to delete existing clone.
+> **Note:** If you get File already exist error, please execute following command: rm sustainability -r -f to delete existing clone.
 
 > **Note**: When executing scripts, it is important to let them run to completion. Some tasks may take longer than others to run. When a script completes execution, you will be returned to a command prompt. 
 
-5. **Execute** the retailSetup.ps1 script by executing the following command:
+5. **Execute** the sustainabilitySetup.ps1 script by executing the following command:
 Command:
 ```
-cd ./retail/retaildemo
+cd ./sustainability/sustainabilitydemo
 ```
 
 6. Then **run** the PowerShell: 
 ```
-./retailSetup.ps1
+./sustainabilitySetup.ps1
 ```
     
 ![Commands to run the PowerShell Script.](media/cloud-shell-5.png)
@@ -311,7 +311,7 @@ cd ./retail/retaildemo
 	> - The subscription highlighted in yellow will be selected by default if you do not enter any disired subscription. Please select the subscription carefully, as it may break the execution further.
 	> - While you are waiting for processes to get completed in the Azure Cloud Shell window, you'll be asked to enter the code three times. This is necessary for performing installation of various Azure Services and preloading content in the Azure Synapse Analytics SQL Pool tables.
 
-20. You will now be prompted to **enter** the resource group name in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure). – 'DDiB-Retail-Lab'.
+20. You will now be prompted to **enter** the resource group name in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure). – 'DDiB-Sustainability-Lab'.
 
 	![Enter Resource Group name.](media/cloud-shell-14.png)
 
