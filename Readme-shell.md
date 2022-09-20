@@ -437,7 +437,7 @@ Follow these steps to create the Power BI dashboard:
 
       ![New Dashboard.](media/power-bi-report-10.png)
 
-19. **Name** the dashboard ‘Taxpayer Client Services Commissioner Dashboard Before’ and **click** “create”. 
+19. **Name** the dashboard ‘Fleet Manager EMS/Police/Fire (After)’ and **click** “create”. 
 
 20. This new dashboard will appear in the Content section (of the Power BI workspace). 
 	
@@ -471,7 +471,7 @@ Do the following to pin visuals to the dashboard you just created:
 
 28. **Select** ‘Existing dashboard’ radio button. 
 
-29. From ‘select existing dashboard’ dropdown, **select** ‘Taxpayer Client Services Commissioner Dashboard Before’.
+29. From ‘select existing dashboard’ dropdown, **select** ‘Fleet Manager EMS/Police/Fire (After)’.
 
 30. **Click** ‘Pin’.
 
@@ -499,13 +499,13 @@ Do the following to pin visuals to the dashboard you just created:
 
 	![Hover and Click.](media/power-bi-report-21.png)
 	
-37. Select the ‘Taxpayer Client Services Commissioner Dashboard Before’ from existing dashboard list and **click** on pin.
+37. Select the ‘Fleet Manager EMS/Police/Fire (After)’ from existing dashboard list and **click** on pin.
 
 38. Similarly pin rest of the images from Images of the  Taxpayer Client Services Report’ report.
 	
 	![Select Dashboard and Click Pin.](media/power-bi-report-22.png)
 	
-39. **Go back** to the ‘Taxpayer Client Services Commissioner Dashboard Before’ dashboard.
+39. **Go back** to the ‘Fleet Manager EMS/Police/Fire (After)’ dashboard.
 
 	![Go back to Dashboard.](media/power-bi-report-23.png)
 	
@@ -529,7 +529,7 @@ To hide title and subtitle for all the images that you have pined above. Please 
 	
 	![Resize and Rearrange.](media/power-bi-report-26.png)
 	
-46. Similarly pin left image tiles from ‘page 1’ of chicklets report to the Taxpayer Client Services Commissioner Dashboard Before dashboard.
+46. Similarly pin left image tiles from ‘page 1’ of chicklets report to the Fleet Manager EMS/Police/Fire (After) dashboard.
 
 47. **Resize** and **rearrange** the left images tiles as shown in the screenshot. Resize the KPI tile to 1x2. Resize the Deep Dive to 1x4. Resize the logo to 1x1 size; resize other vertical tiles to 2x1 size.  
 
@@ -550,7 +550,7 @@ To hide title and subtitle for all the images that you have pined above. Please 
 
 	![Will see.](media/power-bi-report-30.png)
 	
-52. The Dashboard **Taxpayer Client Services Commissioner Dashboard Before** should finally look like this. Table in following row indicates which KPI’s need to be pinned from which report to achieve this final look.
+52. The Dashboard **Fleet Manager EMS/Police/Fire (After)** should finally look like this. Table in following row indicates which KPI’s need to be pinned from which report to achieve this final look.
 
 	![Final Look.](media/power-bi-report-31.png)
 	
@@ -562,7 +562,7 @@ To hide title and subtitle for all the images that you have pined above. Please 
 
 	![Final Look.](media/power-bi-report-32.png)
 	
-55. **Tax Collection Commissioner Before** should look like this. Following are the details of tiles for the same.
+55. **Fleet Manager EMS/Police/Fire (Before)** should look like this. Following are the details of tiles for the same.
 
 	![Final Look.](media/power-bi-report-33.png)
 	
@@ -570,7 +570,7 @@ To hide title and subtitle for all the images that you have pined above. Please 
 
 	![Table.](media/power-bi-table-2.png)
 
-57. **Tax Collection Commissioner Mid** should look like this. Following are the details of tiles for the same.
+57. **Power Management After** should look like this. Following are the details of tiles for the same.
 	
 	![Final Look.](media/power-bi-report-34.png)
 	
@@ -578,7 +578,7 @@ To hide title and subtitle for all the images that you have pined above. Please 
 
 	![Table.](media/power-bi-table-3.png)
 
-59. **Tax Collection Commissioner After** should look like this. Following are the details of tiles for the same.
+59. **Power Management Before** should look like this. Following are the details of tiles for the same.
 
 	![Final Look.](media/power-bi-report-35.png)
 	
@@ -586,11 +586,35 @@ To hide title and subtitle for all the images that you have pined above. Please 
 
 	![Table.](media/power-bi-table-4.png)
 
-61. **Taxpayer Client Services Commissioner After Dashboard** Dashboard should look like this. 
+61. **Mayor Dashboard After** Dashboard should look like this. 
 
 	![Final Look.](media/power-bi-report-36.png)
 	
 62. **Refer** to this table while pinning rest of the tiles to the dashboard.
+
+	![Table.](media/power-bi-table-5.png)
+	
+63. **Mayor Dashboard Before** Dashboard should look like this. 
+
+	![Final Look.](media/power-bi-report-36.png)
+	
+64. **Refer** to this table while pinning rest of the tiles to the dashboard.
+
+	![Table.](media/power-bi-table-5.png)
+	
+65. **Transportation Head Dashboard (After)** Dashboard should look like this. 
+
+	![Final Look.](media/power-bi-report-36.png)
+	
+66. **Refer** to this table while pinning rest of the tiles to the dashboard.
+
+	![Table.](media/power-bi-table-5.png)
+	
+67. **Transportation Head Dashboard (Before)** Dashboard should look like this. 
+
+	![Final Look.](media/power-bi-report-36.png)
+	
+68. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-5.png)
 	
@@ -607,7 +631,7 @@ This task is optional since we have provided static versions of the reports in t
 
 > **Note:** Use the same credentials for Power BI which you will be using for the Azure account.
 	
-3. After signing in, **click** the workspaces button from the hamburger menu and **select** the “DDiB-Retail” workspace.
+3. After signing in, **click** the workspaces button from the hamburger menu and **select** the “DDiB-Sustainability” workspace.
 
 	![Click Workspace.](media/power-bi-report-47.png)
 
@@ -619,7 +643,7 @@ This task is optional since we have provided static versions of the reports in t
 	
 	![Click Pick a Public Dashboard.](media/power-bi-report-49.png)
 
-6. **Click** on the desired streaming dataset from the given list, here we are selecting “Tax Collection Realtime” and **click** Create Report.
+6. **Click** on the desired streaming dataset from the given list, here we are selecting “Realtime Air Quality API” and **click** Create Report.
 
 	![Click desired streaming dataset.](media/power-bi-report-50.png)
 
@@ -639,7 +663,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 1. **Navigate** to your Power BI workspace.
 
-2. **Click** on one of the dashboards you created. Eg. Taxpayer Client Services Commissioner Dashboard Before.
+2. **Click** on one of the dashboards you created. Eg. Fleet Manager EMS/Police/Fire (Before).
 
 	![Navigate and Click.](media/updating-powerbi.png)
 
@@ -660,7 +684,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 8. **Enter** the following path:  
 	
 	```
-	retail/retaildemo/retaildemo-app/wwwroot/config.js
+	sustainability/sustainabilitydemo/sustainabilitydemo-app/wwwroot/config.js
 	```
 
 9. **Click** Download button.
@@ -669,7 +693,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 10. **Edit** the downloaded file in notepad.
 
-11. **Paste** the dashboard id you copied earlier between the double quotes of key ‘taxpayer_client_services_before’.
+11. **Paste** the dashboard id you copied earlier between the double quotes of key ‘Fleet Manager EMS/Police/Fire (After)’.
 
 12. **Save** the changes to the file.
 
@@ -694,7 +718,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 19. **Execute** following command in cloudshell:  
 	
 	```
-	cp config.js ./retail/retaildemo/retaildemo-app/wwwroot
+	cp config.js ./sustainability/sustainabilitydemo/sustainabilitydemo-app/wwwroot
 	```
 	
 	![Execute the command.](media/updating-powerbi-8.png)
@@ -702,7 +726,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 20.	Execute  following command in cloudshell: 
 	
 	```
-	cd retail/retaildemo/subscripts 
+	cd sustainability/sustainabilitydemo/subscripts 
 	./updateWebAppSubScript.ps1
 	```
 	
@@ -736,7 +760,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 3. **Run** Command: 
 	```
-	cd "retail/retaildemo/subscripts"
+	cd "sustainability/sustainabilitydemo/subscripts"
 	```
 
 4. Then **run** the PowerShell script: 
@@ -806,7 +830,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 **Execute** the Pause_Resume_script.ps1 script by executing the following command: 
 1. **Run** Command: 
 	```
-	cd "retail\retaildemo"
+	cd "sustainability\sustainabilitydemo"
 	```
 
 2. Then **run** the PowerShell script: 
@@ -856,7 +880,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 2. **Run** Command: 
 	```
-	cd "retail\retaildemo"
+	cd "sustainability\sustainabilitydemo"
 	```
 
 3. Then **run** the PowerShell script: 
@@ -866,7 +890,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 	![Run the Powershell Script.](media/authentication-6.png)
 
-4. You will now be prompted to **enter** the resource group name to be deleted in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure) - 'DDib-Retail'.
+4. You will now be prompted to **enter** the resource group name to be deleted in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure) - 'DDib-Sustainability'.
 
 5. You may be prompted to select a subscription in case your account has multiple subscriptions.
 
