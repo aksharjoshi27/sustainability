@@ -45,9 +45,8 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
   - [Task 6: Power BI reports and dashboard creation](#task-6-power-bi-reports-and-dashboard-creation)
   	- [Steps to create Real time report](#steps-to-create-real-time-report)
   	- [Updating Dashboard and Report Ids in Web app](#updating-dashboard-and-report-ids-in-web-app)
-  - [Task 7: QnAmaker and LogicApp Configuration](#task-7-qnamaker-and-logicapp-configuration)
-  - [Task 8: Pause or Resume script](#task-8-pause-or-resume-script)
-  - [Task 9: Clean up resources](#task-9-clean-up-resources)
+  - [Task 7: Pause or Resume script](#task-8-pause-or-resume-script)
+  - [Task 8: Clean up resources](#task-9-clean-up-resources)
 
 <!-- /TOC -->
 
@@ -381,6 +380,8 @@ cd ./sustainability/sustainabilitydemo
 
 ### Task 6: Power BI reports and dashboard creation
 
+### Steps to validate the credentials for reports
+
 1. **Open** Power BI and **Select** the Workspace, which is created in [Task 2](#task-2-power-bi-workspace-creation).
 	
 	![Select Workspace.](media/power-bi-report-3.png)
@@ -395,277 +396,554 @@ The image on the below shows the Reports tab in Power BI.  We can create a Power
 
 To give permissions for the Power BI reports to access the data sources:
 
-6. **Click** the ellipses or settings icon on top right-side corner.
+2. **Click** the ellipses or settings icon on top right-side corner.
 
-7. **Click** the settings dropdown.
+3. **Click** the settings dropdown.
 
-8. **Click** on settings.
+4. **Click** on settings.
 
 	![Permission.](media/power-bi-report-5.png)
 
-9. **Click** on ‘Datasets’ tab.
+5. **Click** on ‘Datasets’ tab.
 	
 	![Dataset.](media/power-bi-report-6.png)
 	
-10. **Click** on the Taxpayer Client Services Report.
+6. **Click** on the CCO Report.
 
-11. **Expand** Data source credentials.
+7. **Expand** Data source credentials.
 
-12. **Click** Edit credentials and a dialogue box will pop up.
+8. **Click** Edit credentials and a dialogue box will pop up.
 
 	![Data Source Creds.](media/power-bi-report-7.png)
 
 > **Note:** Verify the server name has been updated to your current sql pool name for all the datasets. If not, update the same under parameters section and click apply.
 
-13. **Enter** Username as ‘labsqladmin’.
+9. **Enter** Username as ‘labsqladmin’.
 
-14. **Enter** the same SQL Administrator login password that was created for [Task 3](#task-3-deploy-the-arm-template) Step #5
+10. **Enter** the same SQL Administrator login password that was created for [Task 3](#task-3-deploy-the-arm-template) Step #5.
 
-15. **Click** on Sign in.
+11. **Click** on Sign in.
 
 	![Validate Creds.](media/power-bi-report-8.png)
 	
-Follow these steps to create the Power BI dashboard:
+12. **Click** on the Acquisition Impact Report.
 
-16. **Select** the workspace created in [Task 2](#task-2-power-bi-workspace-creation).
+13. **Expand** Data source credentials.
+
+14. **Click** Edit credentials in front of Synapse and a dialogue box will pop up.
+
+	![Data Source Creds.](media/power-bi-report-01.png)
+
+15. Keeping the default values as it is, **click** on Sign in, a new window will pop-up.
+
+	![Validate Creds.](media/power-bi-report-02.png)
+
+16. In the new window, **select** the appropriate user.
+
+	![Validate Creds.](media/power-bi-report-03.png)
+		
+17. **Click** on the ADX Thermostat and Occupancy.
+
+18. **Expand** Data source credentials.
+
+19. **Click** Edit credentials in front of AzureDataExplorer and a dialogue box will pop up.
+
+	![Data Source Creds.](media/power-bi-report-04.png)
+
+20. Keeping the "Authentication method" as "OAuth2" and **click** on Sign in.
+
+	![Validate Creds.](media/power-bi-report-05.png)
+
+21. In the new window, **select** the appropriate user.
+
+	![Validate Creds.](media/power-bi-report-03.png)
+
+22. **Click** on the Retail HTAP.
+
+23. **Expand** Data source credentials.
+
+24. **Click** Edit credentials in front of DocumentDB and a dialogue box will pop up.
+
+	![Data Source Creds.](media/power-bi-report-06.png)
+
+25. Go to the Azure Portal and under resources search for "cosmos" and **click** on the cosmos resource, the resource window opens.
+
+	![Data Source Creds.](media/power-bi-report-07.png)
+
+26. Under the Settings section **select** keys and **copy** the primary key of the cosmos resource.
+
+	![Data Source Creds.](media/power-bi-report-08.png)
+	
+27. In the powerbi tab in step #28, keeping the "Authentication method" as "Key", **paste** the "Account key" from step #30 and **click** on Sign in.
+
+	![Validate Creds.](media/power-bi-report-09.png)
+	
+28. **Click** on the Global Occupational Safety Report.
+
+29. **Expand** Data source credentials.
+
+30. **Click** Edit credentials in front of AzureTable and a dialogue box will pop up.
+
+	![Validate Creds.](media/power-bi-report-010.png)
+	
+31. Go to Azure portal and **search** for 'stretail' and **click** on the storage account.
+
+	![Validate Creds.](media/power-bi-report-011.png)
+	
+32. In the storage account resource, under the Security + networking section **click** on Access keys, **click** on Show keys and then **copy** the key.
+
+	![Validate Creds.](media/power-bi-report-012.png)
+	
+33. Paste the key in the pop-up in step #34, under Account key and **click** on Sign in.
+
+	![Validate Creds.](media/power-bi-report-013.png)
+	
+### Steps to create realtime reports
+
+1.	**Click** on the three dots in front of the “occupancy” and “thermostat” datasets one at a time and **click** on Create report, a new report will be created.
+
+	![Validate Creds.](media/power-bi-report-014.png)
+
+**Occupancy Realtime Visualizations:**
+
+**Average Visitors In**
+
+2. **Select** the stacked column chart visual from “Visualizations”.
+
+	![Validate Creds.](media/power-bi-report-015.png)
+
+3. **Select** the field from the visual from the field panel.
+
+4. **Drag /Select** the column name into the fields which is below the visualization panel.
+	
+5. For showing the average values **click** on the dropdown arrow in the value section field and select the Average.
+
+	![Validate Creds.](media/power-bi-report-016.png)
+	
+	![Validate Creds.](media/power-bi-report-062.png)
+
+	![Validate Creds.](media/power-bi-report-017.png)
+	
+	![Validate Creds.](media/power-bi-report-018.png)
+
+**Average Visitors Out**
+
+6. **Select** the Stacked area line chart for the next visual.
+
+	![Validate Creds.](media/power-bi-report-019.png)
+
+7. **Select** the required field column for the visual.
+
+8. **Drag /Select** the column name into the fields which is below the visualization panel.
+
+	![Validate Creds.](media/power-bi-report-020.png)
+	
+	![Validate Creds.](media/power-bi-report-021.png)
+	
+	![Validate Creds.](media/power-bi-report-022.png)
+	
+**Average Number of Visitors (KPI)**
+
+9. **Select** the Area chart to show the average number of visitors.
+
+	![Validate Creds.](media/power-bi-report-023.png)
+
+10. **Select** the field from the visual from the field panel.
+
+11. **Drag /Select** the column name into the fields which is below the visualization panel.
+
+12. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
+
+	![Validate Creds.](media/power-bi-report-024.png)
+	
+	![Validate Creds.](media/power-bi-report-025.png)
+	
+	![Validate Creds.](media/power-bi-report-026.png)
+
+**Average Number of Visitors (Visual)**
+	
+13. **Select** the Clustered column chart for showing the Average number of visitors visually.
+
+	![Validate Creds.](media/power-bi-report-027.png)
+
+14. **Select** the field from the visual from the field panel.
+
+15. **Drag /Select** the column name into the fields which is below the visualization panel.
+
+16. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
+
+	![Validate Creds.](media/power-bi-report-028.png)
+	
+	![Validate Creds.](media/power-bi-report-029.png)
+	
+	![Validate Creds.](media/power-bi-report-030.png)
+	
+**Average Checkout Time (Visual)**
+
+17. **Select** the Area chart to show the Average Checkout Time.
+
+	![Validate Creds.](media/power-bi-report-031.png)
+
+18. **Select** the field from the visual from the field panel.
+
+19. **Drag /Select** the column name into the fields which is below the visualization panel.
+
+20. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
+
+	![Validate Creds.](media/power-bi-report-032.png)
+	
+	![Validate Creds.](media/power-bi-report-033.png)
+	
+	![Validate Creds.](media/power-bi-report-034.png)
+
+**Average Aisle Dwell Time**
+	
+21. **Select** the Line chart to show the Average Checkout Time.
+
+	![Validate Creds.](media/power-bi-report-035.png)
+	
+22. **Select** the field from the visual from the field panel.
+
+23. **Drag /Select** the column name into the fields which is below the visualization panel.
+
+24. For showing the average values **click** on the dropdown arrow in the value section field and select the Average.
+
+	![Validate Creds.](media/power-bi-report-036.png)
+	
+	![Validate Creds.](media/power-bi-report-037.png)
+	
+	![Validate Creds.](media/power-bi-report-038.png)
+	
+**Average Checkout Time**
+
+25. **Select** the KPI Visual to show the Average Checkout Time.
+
+	![Validate Creds.](media/power-bi-report-039.png)
+	
+26.	**Select** the field from the visual from the field panel.
+
+27.	**Drag /Select** the column name into the fields which is below the visualization panel.
+
+28.	For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
+
+	![Validate Creds.](media/power-bi-report-040.png)
+	
+	![Validate Creds.](media/power-bi-report-041.png)
+	
+	![Validate Creds.](media/power-bi-report-042.png)
+	
+**Average Aisle Dwell Time (KPI)**
+
+29. **Select** the KPI Visual to show the Average Aisle Dwell Time.
+
+	![Validate Creds.](media/power-bi-report-043.png)
+	
+30. **Select** the field from the visual from the field panel.
+
+31. **Drag /Select** the column name into the fields which is below the visualization panel.
+
+32. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
+
+	![Validate Creds.](media/power-bi-report-044.png)
+	
+	![Validate Creds.](media/power-bi-report-045.png)
+	
+	![Validate Creds.](media/power-bi-report-046.png)
+	
+33. After putting visuals **click** on the Save Button.
+
+34. Give the name and **save** it in the same workspace.
+
+	![Validate Creds.](media/power-bi-report-047.png)
+	
+**Thermostat Realtime Visualizations:**
+	
+**Average Temperature (F)**
+
+35. **Select** the Line Chart Visual to show the Average Temperature (F).
+
+	![Validate Creds.](media/power-bi-report-048.png)
+
+36. **Select** the field from the visual from the field panel.
+
+37. **Drag /Select** the column name into the fields which is below the visualization panel.
+
+38. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
+
+	![Validate Creds.](media/power-bi-report-049.png)
+	
+	![Validate Creds.](media/power-bi-report-050.png)
+	
+	![Validate Creds.](media/power-bi-report-051.png)
+	
+**Temperature beyond a comfortable level**
+	
+39. **Select** the Area chart Visual to show the Temperature beyond a comfortable level.
+
+	![Validate Creds.](media/power-bi-report-052.png)
+	
+40. **Select** the field from the visual from the field panel.
+
+41. **Drag /Select** the column name into the fields which is below the visualization panel.
+
+42. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
+
+	![Validate Creds.](media/power-bi-report-053.png)
+	
+	![Validate Creds.](media/power-bi-report-054.png)
+	
+	![Validate Creds.](media/power-bi-report-055.png)
+
+43. After putting visuals, **click** on the Save Button.
+
+44. Give the name and **save** it in the same workspace.
+
+	![Validate Creds.](media/power-bi-report-056.png)
+		
+### Follow these steps to create the Power BI dashboard
+
+1. **Select** the workspace created in [Task 2](#task-2-power-bi-workspace-creation).
 
 	![Select Workspace.](media/power-bi-report-9.png)
 	
-17. **Click** on ‘+ New’ button on the top-right navigation bar.
+2. **Click** on ‘+ New’ button on the top-right navigation bar.
 
-18. **Click** the ‘Dashboard’ option from the drop-down menu.
+3. **Click** the ‘Dashboard’ option from the drop-down menu.
 
       ![New Dashboard.](media/power-bi-report-10.png)
 
-19. **Name** the dashboard ‘Fleet Manager EMS/Police/Fire (After)’ and **click** “create”. 
+4. **Name** the dashboard 'ADX Dashboard' and **click** 'create'.
 
-20. This new dashboard will appear in the Content section (of the Power BI workspace). 
+	![Create Dashboard further steps.](media/power-bi-report-11.png)
+
+5. This new dashboard will appear in the 'Dashboard' section of the Power BI workspace.
+
+**Follow the below steps to change the dashboard theme:**
+
+6. **Open** the URL in a new browser tab to get JSON code for a custom theme:
+[https://raw.githubusercontent.com/microsoft/Azure-Analytics-and-AI-Engagement/retail/retail/CustomTheme.json](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/retail2.0/retail/CustomTheme.json)
+
+7. **Right click** anywhere in browser and **click** 'Save as...'.
+
+8. **Save** the file to your desired location on your computer, leaving the name unchanged.
+
+	![Save the File.](media/theme1.png)
+
+9. **Go back** to the Power BI dashboard you just created.
+
+10. **Click** on the “Edit” at the top right-side corner.
+
+11. **Click** on “Dashboard theme”.
+
+	![Click on Dashboard Theme.](media/theme2.png)
+
+12. **Click** ‘Upload the JSON theme’.
+
+13. **Navigate** to the location where you saved the JSON theme file in the steps above and **select** open.
+
+14. **Click** Save.
+
+	![Navigate Select and Click Save.](media/theme3.png)
+
+**Follow these steps to pin the report to the Power BI dashboard:**
+
+15. **Search** the report 'Occupancy' and then **click** on the report to open it.
+
+	![Create Dashboard further steps.](media/power-bi-report-12.png)
+
+16. Inside the report 'Occupancy' **click** on 'Edit' at the top of the right corner.
+
+	![Select Pillar 1 before.](media/power-bi-report-13.png)
+
+17. **Click** over the tile and **click** on the icon to 'Pin to dashboard'.
+
+	![Select Pillar 1 before.](media/power-bi-report-14.png)	
+
+18. 'Pin to dashboard' window will appear.
+
+19. **Select** the 'Existing Dashboard' radio button.
+
+20. **Select** the existing dashboard 'ADX Dashboard' and **click** on the 'Pin' button.
+
+	![Select Pin to dashboard.](media/power-bi-report-15.png)
+
+21. Similarly, **pin** the others tiles to the Dashboard
+
+	![Pin to dashboard further steps.](media/power-bi-report-16.png)
 	
-	![Create Dashboard.](media/power-bi-report-11.png)
+22. Similarly, **pin** the tiles for the 'Thermostat' to the Dashboard
 
-Do the following to pin visuals to the dashboard you just created:
-
-**Pillar 3: Market Perception** 
-
-21. **Select** the workspace in [Task 2](#task-2-power-bi-workspace-creation).
-
-	![Select Workdspace.](media/power-bi-report-12.png)
-
-22. **Click** on the “Content” section/tab.
-
-	![Click Content.](media/power-bi-report-13.png)
-
-23. In the “Content” section, there will be a list of all the published reports.
-
-24. **Click** on ‘Taxpayer Client Services Report’ Report.
-
-	![Click on Report.](media/power-bi-report-14.png)
-	
-25. **Click** on ‘Pilar 4 A’ page.
-
-26. There you can see Before and After KPIs for using on the same Dashboard.
-
-27. **Hover** over the Awareness KPI & **Click** on pin visual button.
-
-	![Click on Pilar then Hover and then Pin Visual.](media/power-bi-report-15.png)
-
-28. **Select** ‘Existing dashboard’ radio button. 
-
-29. From ‘select existing dashboard’ dropdown, **select** ‘Fleet Manager EMS/Police/Fire (After)’.
-
-30. **Click** ‘Pin’.
-
-	![Select Dashboard and click Pin.](media/power-bi-report-16.png)
-	
-31. Similarly, **pin** the others tiles to the Dashboard
-
-	![Pin other dashboards.](media/power-bi-report-17.png)
-	
-32. **Select** workpace created in [Task 2](#task-2-power-bi-workspace-creation) in the left pane.
+23. **Select** workpace created in [Task 2](#task-2-power-bi-workspace-creation) in the left pane.
 
 	![Select Workspace.](media/power-bi-report-18.png)
 	
-33. **Open** ‘Taxpayer Client Services Report’ report.
+24. **Open** ‘Dashboard-Images’ report.
 
 	![Select Workspace.](media/power-bi-report-19.png)
 	
-34. **Click** on Images page
+25. **Click** on 'REtail 270821' page.
 
-36. **Click** on Edit.
+26. **Click** on Edit.
 
 	![Click on edit.](media/power-bi-report-20.png)
 	
-36. **Hover** on Deep Dive chicklet and **click** pin button.
+27. **Hover** on Deep Dive chicklet and **click** pin button.
 
 	![Hover and Click.](media/power-bi-report-21.png)
 	
-37. Select the ‘Fleet Manager EMS/Police/Fire (After)’ from existing dashboard list and **click** on pin.
+28. Select the ‘ADX Dashboard’ from existing dashboard list and **click** on pin.
+	
+	![Hover and Click.](media/power-bi-report-22.png)
 
-38. Similarly pin rest of the images from Images of the  Taxpayer Client Services Report’ report.
+29. Similarly pin rest of the images from different tabs of the ‘Dashboard-Images’ report.
 	
-	![Select Dashboard and Click Pin.](media/power-bi-report-22.png)
-	
-39. **Go back** to the ‘Fleet Manager EMS/Police/Fire (After)’ dashboard.
+30. **Go back** to the ‘ADX Dashboard’ dashboard.
 
-	![Go back to Dashboard.](media/power-bi-report-23.png)
+	![Go back to Dashboard.](media/power-bi-report-24.png)
 	
-To hide title and subtitle for all the images that you have pined above. Please do the following:
+To hide title and subtitle for all the **images** that you have pined above. Please do the following:
 
-40. Hover on the chiclet and **Click** on ellipsis ‘More Options’ of the image you selected.
+31. Hover on the chiclet and **Click** on ellipsis ‘More Options’ of the image you selected.
 
-41. **Click** on ‘Edit details’.
+32. **Click** on ‘Edit details’.
 
-	![Click on Edit Details.](media/power-bi-report-24.png)
+	![Click on Edit Details.](media/power-bi-report-25.png)
 	
-42. **Uncheck** ‘Display title and subtitle’.
+33. **Uncheck** ‘Display title and subtitle’.
 
-43. **Click** on ‘Apply’.
+34. **Click** on ‘Apply’.
 
-44. **Repeat** Step 38 to 41 for all image tiles.
+35. **Repeat** Step 4 to 22 for all image tiles.
 
-	![Click apply and repeat.](media/power-bi-report-25.png)
+	![Click apply and repeat.](media/power-bi-report-26.png)
 	
-45. After disabling ‘Display title and subtitle’ for all images, **resize** and **rearrange** the top images tiles as shown in the screenshot. 
+36. After disabling ‘Display title and subtitle’ for all images, **resize** and **rearrange** the top images tiles as shown in the screenshot. 
 	
-	![Resize and Rearrange.](media/power-bi-report-26.png)
+	![Resize and Rearrange.](media/power-bi-report-27.png)
 	
-46. Similarly pin left image tiles from ‘page 1’ of chicklets report to the Fleet Manager EMS/Police/Fire (After) dashboard.
+37. Similarly pin left image tiles from ‘Dashboard-Images’ of chicklets report to the ADX Dashboard.
 
-47. **Resize** and **rearrange** the left images tiles as shown in the screenshot. Resize the KPI tile to 1x2. Resize the Deep Dive to 1x4. Resize the logo to 1x1 size; resize other vertical tiles to 2x1 size.  
+38. **Resize** and **rearrange** the left images tiles as shown in the screenshot. Resize the KPI tile to 1x2. Resize the Deep Dive to 1x4. Resize the logo to 1x1 size; resize other vertical tiles to 2x1 size.  
 
-	![Resize and Rearrange again.](media/power-bi-report-27.png)
+	![Resize and Rearrange again.](media/power-bi-report-28.png)
 	
-	
-48. You will see some KPIs or charts like this KPI with title and subtitle. 1. Title, 2. Subtitle.
-	
-	![Will see some KPIs.](media/power-bi-report-28.png)
-	
-49. **Hover** over the cards and charts and go to more options (…)
+**How to add Video in Dashboard:**
 
-50. **Click** on Edit Details.
-	
-	![Hover and Click on Edit Details.](media/power-bi-report-29.png)
-	
-51. You will see something like this picture where you can add subtitle.
+39. In the dashboard, **Select** Edit > Add Tiles 
 
-	![Will see.](media/power-bi-report-30.png)
+	![Validate Creds.](media/power-bi-report-057.png)
 	
-52. The Dashboard **Fleet Manager EMS/Police/Fire (After)** should finally look like this. Table in following row indicates which KPI’s need to be pinned from which report to achieve this final look.
+	![Validate Creds.](media/power-bi-report-058.png)
+	
+40. From the Add a tile Window, **Select** Web content and Next.
 
-	![Final Look.](media/power-bi-report-31.png)
+	![Validate Creds.](media/power-bi-report-059.png)
 	
-53. **Refer** to this table while pinning rest of the tiles to the dashboard.
+41. Add information to the Web content tile window.
 
-	![Table.](media/power-bi-table-1.png)
+42. Add Display Title, Subtitle.
+
+43. For the embedded code, **goto** storage account from the portal, go to the 'video' container and **click** on the video 'final_spatial_analysis_video_1.mp4', now **click** on the copy button for copying the video url, and finally replace the url with 'URL' in the given embedded code given below.
 	
-54. Here is the list of Dashboards you have to create for TRF and the report to migrate to prod environment. You will see the necessary details for the same below. You must refer to the [Excel](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/retail/retaildemo/KPIS%20Dashboards%20mapping.xlsx) file for pinning the tiles to the dashboard.
+	```
+	<video controls loop width="100%" ><source src=URL type="video/mp4">
+	```
+	
+	![Validate Creds.](media/power-bi-report-061.png)
+	
+44. **Copy** the whole Embed code with replaced 'URL' value. 
+
+45. **Paste** the Embed code and Select Apply. 
+
+46. On the Dashboard resize, move the content as needed.
+
+	![Validate Creds.](media/power-bi-report-060.png)
+
+47. The Dashboard **ADX Dashboard** should finally look like this. Table in following row indicates which KPI’s need to be pinned from which report to achieve this final look.
+	
+	![Final Look.](media/power-bi-report-38.png)
+
+48. **Refer** to this table while pinning rest of the tiles to the dashboard.
+
+	![Table.](media/power-bi-table-6.png)
+
+49. Here is the list of Dashboards you have to create for Retail and the report to migrate to prod environment. You will see the necessary details for the same below. You must refer to the [Excel](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/retail2.0/retail/KPIS%20Dashboards%20mapping%20Retail%202.0.xlsx) file for pinning the tiles to the dashboard.
+
+	![Final Look.](media/power-bi-report-33.png)
+
+50. **CEO Dashboard - May** should look like this. Following are the details of tiles for the same.
 
 	![Final Look.](media/power-bi-report-32.png)
 	
-55. **Fleet Manager EMS/Police/Fire (Before)** should look like this. Following are the details of tiles for the same.
+51. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
-	![Final Look.](media/power-bi-report-33.png)
+	![Table.](media/power-bi-table-1.png)
+
+52. **CEO Dashboard - Sep** should look like this. Following are the details of tiles for the same.
+
+	![Final Look.](media/power-bi-report-34.png)
 	
-56. **Refer** to this table while pinning rest of the tiles to the dashboard.	
+53. **Refer** to this table while pinning rest of the tiles to the dashboard.	
 
 	![Table.](media/power-bi-table-2.png)
 
-57. **Power Management After** should look like this. Following are the details of tiles for the same.
+54. **CEO Dashboard - Oct** should look like this. Following are the details of tiles for the same.
 	
-	![Final Look.](media/power-bi-report-34.png)
+	![Final Look.](media/power-bi-report-35.png)
 	
-58. **Refer** to this table while pinning rest of the tiles to the dashboard.	
+55. **Refer** to this table while pinning rest of the tiles to the dashboard.	
 
 	![Table.](media/power-bi-table-3.png)
 
-59. **Power Management Before** should look like this. Following are the details of tiles for the same.
+56. **CEO Dashboard - Nov** Dashboard should look like this. 
 
-	![Final Look.](media/power-bi-report-35.png)
+	![Final Look.](media/power-bi-report-36.png)
 	
-60. **Refer** to this table while pinning rest of the tiles to the dashboard.	
+57. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-4.png)
-
-61. **Mayor Dashboard After** Dashboard should look like this. 
-
-	![Final Look.](media/power-bi-report-36.png)
 	
-62. **Refer** to this table while pinning rest of the tiles to the dashboard.
+58. **CEO Dashboard - Dec** Dashboard should look like this.
+
+	![Final Look.](media/power-bi-report-37.png)
+	
+59. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-5.png)
 	
-63. **Mayor Dashboard Before** Dashboard should look like this. 
+60. **ESG Dashboard** Dashboard should look like this.
 
-	![Final Look.](media/power-bi-report-36.png)
+	![Final Look.](media/power-bi-report-39.png)
 	
-64. **Refer** to this table while pinning rest of the tiles to the dashboard.
+61. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
-	![Table.](media/power-bi-table-5.png)
+	![Table.](media/power-bi-table-7.png)
 	
-65. **Transportation Head Dashboard (After)** Dashboard should look like this. 
+62. **Finance Dashboard** Dashboard should look like this.
 
-	![Final Look.](media/power-bi-report-36.png)
+	![Final Look.](media/power-bi-report-40.png)
+
+63. **Refer** to this table while pinning rest of the tiles to the dashboard.
+
+	![Table.](media/power-bi-table-8.png)
 	
-66. **Refer** to this table while pinning rest of the tiles to the dashboard.
+64. **VP Customer Experience Dashboard** Dashboard should look like this.
 
-	![Table.](media/power-bi-table-5.png)
-	
-67. **Transportation Head Dashboard (Before)** Dashboard should look like this. 
+	![Final Look.](media/power-bi-report-41.png)
 
-	![Final Look.](media/power-bi-report-36.png)
-	
-68. **Refer** to this table while pinning rest of the tiles to the dashboard.
+65. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
-	![Table.](media/power-bi-table-5.png)
-	
-### Steps to create Real time report
-
-This task is optional since we have provided static versions of the reports in the package already.
-
-1. **Open** Power BI in a new tab using the following link:
-	[https://app.powerbi.com/](https://app.powerbi.com/).
-
-2. **Sign into** Power BI using your Power BI Pro account.
-
-	![Sign_in_powerbi.](media/power-bi-report-46.png)
-
-> **Note:** Use the same credentials for Power BI which you will be using for the Azure account.
-	
-3. After signing in, **click** the workspaces button from the hamburger menu and **select** the “DDiB-Sustainability” workspace.
-
-	![Click Workspace.](media/power-bi-report-47.png)
-
-4. **Click** New to expand menu and then **click** Report.
-
-	![Click New and Report.](media/power-bi-report-48.png)
-
-5. **Click** Pick a published dataset.
-	
-	![Click Pick a Public Dashboard.](media/power-bi-report-49.png)
-
-6. **Click** on the desired streaming dataset from the given list, here we are selecting “Realtime Air Quality API” and **click** Create Report.
-
-	![Click desired streaming dataset.](media/power-bi-report-50.png)
-
-7. **Select** the KPI visual or any other required visual from Visualization pane.
-
-8. **Drag** or **select** the required fields from Fields pane to Visualization pane’s Field tab.
-
-	![Select the KPI, Drag or select required fields.](media/power-bi-report-51.png)
-
-9. Similarly, **create** other visuals and **save** the Power BI Report. You can also pin the visuals to the dashboard.
-
-	![Create other visuals and save the Power BI Report.](media/power-bi-report-52.png)
+	![Table.](media/power-bi-table-9.png)
 
 ### Updating Dashboard and Report Ids in Web app
 
-By default, the web app will be provisioned with Gif placeholders for web app screens with dashboards. Once you have completed the steps listed above in this section, you can update the dashboard id’s generated in to the main web app if you choose. Here are the steps for it.
+By default, the web app will be provisioned with Gif placeholders for web app screens with dashboards. Once you have completed the steps listed above in this section, you can update the dashboard id’s generated into the main web app if you choose. Here are the steps for it.
 
 1. **Navigate** to your Power BI workspace.
 
-2. **Click** on one of the dashboards you created. Eg. Fleet Manager EMS/Police/Fire (Before).
+2. **Click** on one of the dashboards you created. Eg. ADX Dashboard.
 
-	![Navigate and Click.](media/updating-powerbi.png)
+	![Navigate and Click.](media/power-bi-report-24.png)
 
 3. **Copy** the dashboard id from the url bar at the top.
 	
@@ -684,140 +962,77 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 8. **Enter** the following path:  
 	
 	```
-	sustainability/sustainabilitydemo/sustainabilitydemo-app/wwwroot/config.js
+	retail/retail/retaildemo-app/wwwroot/config-poc.js
 	```
 
 9. **Click** Download button.
 
 	![Enter path and Click download button.](media/updating-powerbi-4.png)
+	
+10. At the right bottom of the cloudshell screen you get a hyperlink, **click** on it.
 
-10. **Edit** the downloaded file in notepad.
+	![Enter path and Click download button.](media/updating-powerbi-12.png)
 
-11. **Paste** the dashboard id you copied earlier between the double quotes of key ‘Fleet Manager EMS/Police/Fire (After)’.
+11. **Edit** the downloaded file in notepad.
 
-12. **Save** the changes to the file.
+12. **Paste** the dashboard id you copied earlier between the double quotes of key ‘CEO Dashboard - May’.
+
+13. **Save** the changes to the file.
 
 	![Edit paste and save.](media/updating-powerbi-5.png)
 
-13. **Navigate** to azure portal.
+14. **Navigate** to azure portal.
 
-14. **Open** the Azure Cloud Shell by selecting its icon from the top toolbar.
+15. **Open** the Azure Cloud Shell by selecting its icon from the top toolbar.
 
 	![Navigate and Open.](media/updating-powerbi-6.png)
 
-15. **Click** upload/download button.
+16. **Click** upload/download button.
 
-16. **Click** upload.
+17. **Click** upload.
 
-17. **Select** the config.js file you just updated.
+18. **Select** the config-poc.js file you just updated.
 
-18. **Click** open.
+19. **Click** open.
 
 	![Select and Click open.](media/updating-powerbi-7.png)
 
-19. **Execute** following command in cloudshell:  
+20. **Execute** the following command in cloudshell:  
 	
 	```
-	cp config.js ./sustainability/sustainabilitydemo/sustainabilitydemo-app/wwwroot
+	cp config-poc.js ./retail/retail/retaildemo-app/wwwroot
 	```
 	
 	![Execute the command.](media/updating-powerbi-8.png)
 
-20.	Execute  following command in cloudshell: 
+21.	**Execute** the following command in cloudshell: 
 	
 	```
-	cd sustainability/sustainabilitydemo/subscripts 
+	cd retail/retail/subscripts 
 	./updateWebAppSubScript.ps1
 	```
 	
 	![Execute the command.](media/updating-powerbi-9.png)
 
-21. From the Azure Cloud Shell, **copy** the authentication code. 
+22. From the Azure Cloud Shell, **copy** the authentication code. 
 
-22. **Click** on the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
+23. **Click** on the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
 
 	![Copy and Click on Link.](media/updating-powerbi-10.png)
 
-23. **Paste** the authentication code.
+24. **Paste** the authentication code.
 
-24. **Select** appropriate username when prompted.
+25. **Select** appropriate username when prompted.
 
-25. Wait for script execution to complete.
+26. Wait for the script execution to complete.
 
 	![Paste select and wait.](media/updating-powerbi-11.png)
 
 > **Note:** You may be prompted to select your subscription if you have multiple subscriptions.
-
-### Task 7: QnAmaker and LogicApp Configuration
-
-1. **Open** the Azure Portal 
-
-2. **Click** on the Azure Cloud Shell icon from the top toolbar. 
-
-	![Open and Click on Azure Cloud Shell.](media/fintax-poc.png)
-
-	**Execute** qna_logicapp_subscript.ps1 script by executing the following command: 
-
-3. **Run** Command: 
-	```
-	cd "sustainability/sustainabilitydemo/subscripts"
-	```
-
-4. Then **run** the PowerShell script: 
-	```
-	./qna_logicapp_subscript.ps1 
-	```
-	![Run the Powershell Script.](media/qna_logicapp-1.png)
 	
-5. You will have to complete the 'az login' and 'device login' authentication by following the steps 7 to 18 of [Task 4](#task-4-run-the-cloud-shell-to-provision-the-demo-resources) and may be prompted to select your subscription if you have multiple subscriptions.
-	
-6. After the subscript is completed, **open** a new tab on your browser and **launch** [qnamaker.ai](https://www.qnamaker.ai/) as below
-
-	![Search QnAmaker.](media/qna_logicapp-2.png)
-	
-7. **Sign In** using the same user credentials which you have used for previous tasks, **go to** the "My knowledge bases" section.
-
-	![Switch section.](media/qna_logicapp-3.png)
-
-8. There will be 3 dropdowns namely "Select tenant", "Select subscription" and "Select service". From the dropdown **select** the appropriate values and in the the service dropdown make sure to select the value starting with "qnamaker-"
-
-	![Select values.](media/qna_logicapp-4.png)
-	
-9. **Click** on the knowledge base name.
-
-	![Knowledge base name.](media/qna_logicapp-5.png)
-	
-10. You will be directed to another screen, **switch** to Publish section and **click** on Publish button.
-
-	![Publish.](media/qna_logicapp-6.png)
-	
-11. The output screen will have some values, **copy** the value of post and concatenate it after the value of host in a notepad.
-
-	![Values host and post.](media/qna_logicapp-7.png)
-	
-12. The concatinated value should appear like below.
-
-	![Values.](media/qna_logicapp-8.png)
-	
-13. **Copy** and **Paste** the value of Authorisation as well in a notepad.
-
-	![Authorisation.](media/qna_logicapp-9.png)
-	
-14. **Go** to the the resource group, search for logic app and **click** on it.
-
-	![Logic App.](media/qna_logicapp-10.png)
-	
-15. Uner the "Development Tools" section **select** "Logic app designer".
-
-	![Logic App.](media/qna_logicapp-11.png)
-	
-16. **Expand** the "KnowledgeBaseAPICall" by clicking on it, **paste** the values for "URI" and "Authentication" from the notepad from step 9 and 10 respectively and finally **click** on "Save".
-
-	![Logic App.](media/qna_logicapp-12.png)
-
 > **Note:** The setup for your Dream Demo in a Box is done here and now you can follow the demo script for testing/demoing your environment.
 
-### Task 8: Pause or Resume script
+### Task 7: Pause or Resume script
 
 > **Note:** Please perform these steps after your demo is done and you do not need the environment anymore. Also ensure you Resume the environment before demo if you paused it once. 
  
@@ -866,7 +1081,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 	![Enter your choice.](media/authentication-4.png)
 
-### Task 9: Clean up resources
+### Task 8: Clean up resources
 
 > **Note: Perform these steps after your demo is done and you do not need the resources anymore**
 
