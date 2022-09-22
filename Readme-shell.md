@@ -203,10 +203,6 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 9. **Click** the **Create** button once the template has been validated.
 
 	![Creating the template after validation.](media/powerbi-deployment-3.png)
-
-	> **NOTE:** You may also see message in red asking to agree to terms of service after validation on same screen as below.
-	
-	![Creating the template after validation.](media/agreement-error.png)
 	
 	> **NOTE:** The provisioning of your deployment resources will take approximately 10 minutes.
 	
@@ -251,7 +247,7 @@ git clone -b sustainability https://github.com/microsoft/Azure-Analytics-and-AI-
 > **Note**: When executing scripts, it is important to let them run to completion. Some tasks may take longer than others to run. When a script completes execution, you will be returned to a command prompt. 
 
 5. **Execute** the sustainabilitySetup.ps1 script by executing the following command:
-Command:
+
 ```
 cd ./sustainability/sustainabilitydemo
 ```
@@ -340,12 +336,13 @@ cd ./sustainability/sustainabilitydemo
 
 	> **Note:** The deployment will take approximately 50-55 minutes to complete. Keep checking the progress with messages printed in the console to avoid timeout.
 
-26. After complete script has been executed, you get to see a messages "--Execution Complete--", above which there are 3 links available as show in the image below. **Click** on each of those links once and then after the page loads close the brower tabs.
+26. After the complete script has been executed, you get to see the message "--Execution Complete--", now **go to** the Azure Portal and **search** for app services, **click** on each one of the simulator apps.
 
-	![Click on the link.](media/cloud-shell-20.png)
+	![Enter Resource Group name.](media/cloud-shell-20.png)
 	
-	> Note: Clicking these links will ensure that the data simulator applications gets start and will not dislplay ani UI on browser page, instead may give error like 404, which is its expected behaviour.
-	
+27. **Click** on the browse button for **each one** of the app services once, a new window will appear, **close** the window.
+
+	![Enter Resource Group name.](media/cloud-shell-21.png)	
       
 ### Task 5: Lake Database creation and Pipeline execution
 
@@ -425,78 +422,26 @@ To give permissions for the Power BI reports to access the data sources:
 
 	![Validate Creds.](media/power-bi-report-8.png)
 	
-12. **Click** on the Acquisition Impact Report.
+12. **Click** on the Retail HTAP.
 
 13. **Expand** Data source credentials.
 
-14. **Click** Edit credentials in front of Synapse and a dialogue box will pop up.
-
-	![Data Source Creds.](media/power-bi-report-01.png)
-
-15. Keeping the default values as it is, **click** on Sign in, a new window will pop-up.
-
-	![Validate Creds.](media/power-bi-report-02.png)
-
-16. In the new window, **select** the appropriate user.
-
-	![Validate Creds.](media/power-bi-report-03.png)
-		
-17. **Click** on the ADX Thermostat and Occupancy.
-
-18. **Expand** Data source credentials.
-
-19. **Click** Edit credentials in front of AzureDataExplorer and a dialogue box will pop up.
-
-	![Data Source Creds.](media/power-bi-report-04.png)
-
-20. Keeping the "Authentication method" as "OAuth2" and **click** on Sign in.
-
-	![Validate Creds.](media/power-bi-report-05.png)
-
-21. In the new window, **select** the appropriate user.
-
-	![Validate Creds.](media/power-bi-report-03.png)
-
-22. **Click** on the Retail HTAP.
-
-23. **Expand** Data source credentials.
-
-24. **Click** Edit credentials in front of DocumentDB and a dialogue box will pop up.
+14. **Click** Edit credentials in front of DocumentDB and a dialogue box will pop up.
 
 	![Data Source Creds.](media/power-bi-report-06.png)
 
-25. Go to the Azure Portal and under resources search for "cosmos" and **click** on the cosmos resource, the resource window opens.
+15. Go to the Azure Portal and under resources search for "cosmos" and **click** on the cosmos resource, the resource window opens.
 
 	![Data Source Creds.](media/power-bi-report-07.png)
 
-26. Under the Settings section **select** keys and **copy** the primary key of the cosmos resource.
+16. Under the Settings section **select** keys and **copy** the primary key of the cosmos resource.
 
 	![Data Source Creds.](media/power-bi-report-08.png)
 	
-27. In the powerbi tab in step #28, keeping the "Authentication method" as "Key", **paste** the "Account key" from step #30 and **click** on Sign in.
+17. In the powerbi tab in step #28, keeping the "Authentication method" as "Key", **paste** the "Account key" from step #30 and **click** on Sign in.
 
 	![Validate Creds.](media/power-bi-report-09.png)
-	
-28. **Click** on the Global Occupational Safety Report.
-
-29. **Expand** Data source credentials.
-
-30. **Click** Edit credentials in front of AzureTable and a dialogue box will pop up.
-
-	![Validate Creds.](media/power-bi-report-010.png)
-	
-31. Go to Azure portal and **search** for 'stsustainability' and **click** on the storage account.
-
-	![Validate Creds.](media/power-bi-report-011.png)
-	
-32. In the storage account resource, under the Security + networking section **click** on Access keys, **click** on Show keys and then **copy** the key.
-
-	![Validate Creds.](media/power-bi-report-012.png)
-	
-33. Paste the key in the pop-up in step #34, under Account key and **click** on Sign in.
-
-	![Validate Creds.](media/power-bi-report-013.png)
-	
+		
 ### Steps to create realtime reports
 
 1.	**Click** on the three dots in front of the “occupancy” and “thermostat” datasets one at a time and **click** on Create report, a new report will be created.
