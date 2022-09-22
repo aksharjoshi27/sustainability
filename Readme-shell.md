@@ -346,9 +346,6 @@ cd ./sustainability/sustainabilitydemo
 	
 	> Note: Clicking these links will ensure that the data simulator applications gets start and will not dislplay ani UI on browser page, instead may give error like 404, which is its expected behaviour.
 	
-27. If you don't have admin permission, Please ask your admin to execute the following command for proper execution of Immersive Reader application.
-
-	![Click on the link.](media/csu-permission.png)
       
 ### Task 5: Lake Database creation and Pipeline execution
 
