@@ -254,52 +254,42 @@ cd ./sustainability/sustainabilitydemo
 
 6. Then **run** the PowerShell: 
 ```
-./sustainabilitySetup.ps1
+./retailSetup.ps1
 ```
     
 ![Commands to run the PowerShell Script.](media/cloud-shell-5.png)
-      
-7. From the Azure Cloud Shell, **copy** the authentication code
 
-8. Click on the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
+7. You will see the below screen, **enter** 'Y' and **press** the enter key.
+
+	![Commands to run the PowerShell Script.](media/cloud-shell-18.png)
+      
+8. From the Azure Cloud Shell, **copy** the authentication code
+
+9. Click on the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
 
 	![Authentication link and Device Code.](media/cloud-shell-6.png)
      
-9. **Paste** the authentication code.
+10. **Paste** the authentication code and **click** on Next.
 
 	![New Browser Window to provide the Authentication Code.](media/cloud-shell-7.png)
 
-10. **Select** the same user that you used for signing in to the Azure Portal in [Task 1](#task-1-create-a-resource-group-in-azure).
+11. **Select** the same user that you used for signing in to the Azure Portal in [Task 1](#task-1-create-a-resource-group-in-azure).
 
 	![Select the User Account which you want to Authenticate.](media/cloud-shell-8.png)
+	
+12. In the below screen **click** on continue.
 
-11. **Close** the browser tab once you see the message window at right and **go back** to your Azure Cloud Shell execution window.
+	![Authentication done.](media/cloud-shell-20.png)
+
+13. **Close** the browser tab once you see the message window at right and **go back** to your Azure Cloud Shell execution window.
 
 	![Authentication done.](media/cloud-shell-9.png)
 	
-12. **Navigate back** to the resource group tab.
+14. You will see the below screen and perform step #9 to step #13 again.
 
-13. You will get another code to authenticate an Azure PowerShell script for creating reports in Power BI. **Copy** the code.
+	![Authentication done.](media/cloud-shell-21.png)
 
-14. **Click** the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).
-
-	![Authentication link and Device code.](media/cloud-shell-10.png)
-
-15. A new browser window will launch.
-
-16. **Enter** the authentication code you copied from the shell above.
-
-	![Enter the Resource Group name.](media/cloud-shell-11.png)
-
-17. Again, **select** the same user to authenticate which you used for signing into the Azure Portal in [Task 1](#task-1-create-a-resource-group-in-azure).
-
-	![Select Same User to Authenticate.](media/cloud-shell-12.png)
-	
-18. **Close** the browser tab once you see the message window at right, and then go back to your Azure Cloud Shell execution window.
-
-	![Close the browser tab.](media/cloud-shell-13.png)
-
-19. Now you will be prompted to select subscription if you have multiple subscription assigned to the user you used for device login.
+15. Now you will be prompted to select subscription if you have multiple subscription assigned to the user you used for device login.
 
     ![Close the browser tab.](media/select-sub.png)
 	
@@ -308,41 +298,45 @@ cd ./sustainability/sustainabilitydemo
 	> - The subscription highlighted in yellow will be selected by default if you do not enter any disired subscription. Please select the subscription carefully, as it may break the execution further.
 	> - While you are waiting for processes to get completed in the Azure Cloud Shell window, you'll be asked to enter the code three times. This is necessary for performing installation of various Azure Services and preloading content in the Azure Synapse Analytics SQL Pool tables.
 
-20. You will now be prompted to **enter** the resource group name in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure). – 'DDiB-Sustainability-Lab'.
+16. You will be asked to confirm for the subscription, **enter** 'Y' and **press** the enter key.
+
+	![Commands to run the PowerShell Script.](media/cloud-shell-19.png)
+
+17. You will now be prompted to **enter** the resource group name in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure). – 'DDiB-Retail-Lab'.
 
 	![Enter Resource Group name.](media/cloud-shell-14.png)
-
-21. You will get another code to authenticate an Azure PowerShell script for creating reports in Power BI. **Copy** the code.
-	> **Note:**
-	> Note: You may see errors in script execution if you  do not have necessary permissions for cloudshell to manipulate your Power BI workspace. In such case follow this document [Power BI Embedding](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/retail/retaildemo/Power%20BI%20Embedding.md) to get the necessary permissions assigned. You’ll have to manually upload the reports to your Power BI workspace by downloading them from this location [Reports](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/tree/retail/retaildemo/artifacts/reports). 
-
-22. **Click** the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).
-
-      ![Click the link.](media/cloud-shell-16.png)
-      
-23. A new browser window will launch. **Paste** the code that you copied from the shell in step 21.
-
-	![Paste the code.](media/cloud-shell-17.png)
-
-	> Note: Make sure to provide the device code before it expires and let the script run till completion.
-
-24. **Select** the same user to authenticate which you used for signing into the Azure Portal in [Task 1](#task-1-create-a-resource-group-in-azure). 
-
-	![Select the same user.](media/cloud-shell-18.png)
-
-25. **Close** the browser tab once you see the message window at right and go back to your Azure Cloud Shell execution window.
-
-	![Close the browser.](media/cloud-shell-19.png)
-
-	> **Note:** The deployment will take approximately 50-55 minutes to complete. Keep checking the progress with messages printed in the console to avoid timeout.
-
-26. After the complete script has been executed, you get to see the message "--Execution Complete--", now **go to** the Azure Portal and **search** for app services, **click** on each one of the simulator apps.
-
-	![Enter Resource Group name.](media/cloud-shell-20.png)
 	
-27. **Click** on the browse button for **each one** of the app services once, a new window will appear, **close** the window.
+18. Now you will be prompted if you have an unlimited video indexer account, **press** enter key.
 
-	![Enter Resource Group name.](media/cloud-shell-21.png)	
+	![Enter Resource Group name.](media/cloud-shell-15.png)
+
+19. After the complete script has been executed, you get to see the message "--Execution Complete--", now **go to** the Azure Portal and **search** for app services, **click** on each one of the simulator apps.
+
+	![Enter Resource Group name.](media/cloud-shell-16.png)
+	
+20. **Click** on the browse button for **each one** of the app services once, a new window will appear, **close** the window.
+
+	![Enter Resource Group name.](media/cloud-shell-17.png)
+	
+21. **Goto** the resource group, **search** for the "aml" and **click** on the aml resource.
+
+	![Enter Resource Group name.](media/cloud-shell-22.png)
+
+22. **Click** on "Launch Studio".
+	
+	![Enter Resource Group name.](media/cloud-shell-23.png)
+	
+23. **Goto** notebooks section, **select** "13 Building a Video Recommendation Model.ipynb" and **click** on the "+" sign as shown in the image to create a compute.
+
+	![Enter Resource Group name.](media/cloud-shell-24.png)
+	
+24. **Enter** desired compute name, **select** Virtual Machine Type, **select** Virtual machine size, and then **click** on create.
+
+	![Enter Resource Group name.](media/cloud-shell-25.png)
+	
+25. Verify the compute and kernel show green and are ready, if not wait for them to turn green, then **click** on the ">>" button at top left in the workspace as shown in the image, let the notebook run successfully and then **open** the "14 Personality Based Video Recommender.ipynb" notebook and **run** it as well.
+
+	![Enter Resource Group name.](media/cloud-shell-26.png)
       
 ### Task 5: Lake Database creation and Pipeline execution
 
