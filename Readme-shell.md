@@ -419,15 +419,15 @@ To give permissions for the Power BI reports to access the data sources:
 		
 ### Steps to create realtime reports
 
-1.	**Click** on the three dots in front of the “occupancy” and “thermostat” datasets one at a time and **click** on Create report, a new report will be created.
+1.	**Click** on the three dots in front of the “Realtime Air Quality API” dataset and **click** on Create report, a new report will be created.
 
 	![Validate Creds.](media/power-bi-report-014.png)
 
-**Occupancy Realtime Visualizations:**
+**Realtime Air Quality API Realtime Visualizations:**
 
-**Average Visitors In**
+**AQI**
 
-2. **Select** the stacked column chart visual from “Visualizations”.
+2. **Select** the KPI visual from “Visualizations”.
 
 	![Validate Creds.](media/power-bi-report-015.png)
 
@@ -435,14 +435,20 @@ To give permissions for the Power BI reports to access the data sources:
 
 4. **Drag /Select** the column name into the fields which is below the visualization panel.
 	
-5. For showing the average values **click** on the dropdown arrow in the value section field and select the Average.
+5. Select Page Level Filter in Filter pane.
 
 	![Validate Creds.](media/power-bi-report-016.png)
 	
+6. Drag the “ReadingDateTimeUTC”, column to “Filters on this page” in filter pane.
+
 	![Validate Creds.](media/power-bi-report-062.png)
+
+7. Select filter Type as “Relative Time”. In “Show items when the value” options, select “Is in the last”, “1” & “minute”. 
 
 	![Validate Creds.](media/power-bi-report-017.png)
 	
+9. Select Apply Filter.
+
 	![Validate Creds.](media/power-bi-report-018.png)
 
 **Average Visitors Out**
