@@ -451,15 +451,15 @@ To give permissions for the Power BI reports to access the data sources:
 
 	![Validate Creds.](media/power-bi-report-018.png)
 
-**Average Visitors Out**
+**PM1**
 
-6. **Select** the Stacked area line chart for the next visual.
+10. **Select** the KPI for the next visual. 
 
 	![Validate Creds.](media/power-bi-report-019.png)
 
-7. **Select** the required field column for the visual.
+11. **Select** the required field column for the visual.
 
-8. **Drag /Select** the column name into the fields which is below the visualization panel.
+12. **Drag /Select** the column name into the fields which is below the visualization panel.
 
 	![Validate Creds.](media/power-bi-report-020.png)
 	
@@ -467,17 +467,15 @@ To give permissions for the Power BI reports to access the data sources:
 	
 	![Validate Creds.](media/power-bi-report-022.png)
 	
-**Average Number of Visitors (KPI)**
+**PM10**
 
-9. **Select** the Area chart to show the average number of visitors.
+13. **Select** the KPI to show the PM10 Visual.
 
 	![Validate Creds.](media/power-bi-report-023.png)
 
-10. **Select** the field from the visual from the field panel.
+14. **Select** the field from the visual from the field panel.
 
-11. **Drag /Select** the column name into the fields which is below the visualization panel.
-
-12. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
+15. **Drag /Select** the column name into the fields which is below the visualization panel.
 
 	![Validate Creds.](media/power-bi-report-024.png)
 	
@@ -485,17 +483,15 @@ To give permissions for the Power BI reports to access the data sources:
 	
 	![Validate Creds.](media/power-bi-report-026.png)
 
-**Average Number of Visitors (Visual)**
+**PM25**
 	
-13. **Select** the Clustered column chart for showing the Average number of visitors visually.
+16. **Select** the KPI for showing the PM25 visual.
 
 	![Validate Creds.](media/power-bi-report-027.png)
 
-14. **Select** the field from the visual from the field panel.
+17. **Select** the field from the visual from the field panel.
 
-15. **Drag /Select** the column name into the fields which is below the visualization panel.
-
-16. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
+18. **Drag /Select** the column name into the fields which is below the visualization panel.
 
 	![Validate Creds.](media/power-bi-report-028.png)
 	
@@ -503,9 +499,9 @@ To give permissions for the Power BI reports to access the data sources:
 	
 	![Validate Creds.](media/power-bi-report-030.png)
 	
-**Average Checkout Time (Visual)**
+**AQI trend in this Hour**
 
-17. **Select** the Area chart to show the Average Checkout Time.
+17. **Select** the Line chart to show the AQI Trend.
 
 	![Validate Creds.](media/power-bi-report-031.png)
 
@@ -519,11 +515,17 @@ To give permissions for the Power BI reports to access the data sources:
 	
 	![Validate Creds.](media/power-bi-report-033.png)
 	
+21. **Select** Further Analysis tab in the Visualization Pane. **Select** “Average Line”. Add one average line by clicking on “+ Add Line”.
+	
 	![Validate Creds.](media/power-bi-report-034.png)
 
-**Average Aisle Dwell Time**
+22. **Position** the visual in the report.
+
+	![Validate Creds.](media/power-bi-report-034-1.png)
+
+**PM 2.5 Trend in this Hour**
 	
-21. **Select** the Line chart to show the Average Checkout Time.
+21. **Select** the Line chart to show the PM2.5 Trend.
 
 	![Validate Creds.](media/power-bi-report-035.png)
 	
@@ -537,93 +539,23 @@ To give permissions for the Power BI reports to access the data sources:
 	
 	![Validate Creds.](media/power-bi-report-037.png)
 	
+25. Select Further Analysis tab in the Visualization Pane. **Select** "Average Line". **Add** one average line by clicking on “+ Add Line”. 
+
+26. **Drag / Select** the column name “Mean_PM25” in series option. 
+	
 	![Validate Creds.](media/power-bi-report-038.png)
+
+27. Position the visual in the report.
+
+	![Validate Creds.](media/power-bi-report-038-1.png)
 	
-**Average Checkout Time**
-
-25. **Select** the KPI Visual to show the Average Checkout Time.
-
-	![Validate Creds.](media/power-bi-report-039.png)
-	
-26.	**Select** the field from the visual from the field panel.
-
-27.	**Drag /Select** the column name into the fields which is below the visualization panel.
-
-28.	For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
-
-	![Validate Creds.](media/power-bi-report-040.png)
-	
-	![Validate Creds.](media/power-bi-report-041.png)
-	
-	![Validate Creds.](media/power-bi-report-042.png)
-	
-**Average Aisle Dwell Time (KPI)**
-
-29. **Select** the KPI Visual to show the Average Aisle Dwell Time.
-
-	![Validate Creds.](media/power-bi-report-043.png)
-	
-30. **Select** the field from the visual from the field panel.
-
-31. **Drag /Select** the column name into the fields which is below the visualization panel.
-
-32. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
-
-	![Validate Creds.](media/power-bi-report-044.png)
-	
-	![Validate Creds.](media/power-bi-report-045.png)
-	
-	![Validate Creds.](media/power-bi-report-046.png)
-	
-33. After putting visuals **click** on the Save Button.
-
-34. Give the name and **save** it in the same workspace.
-
-	![Validate Creds.](media/power-bi-report-047.png)
-	
-**Thermostat Realtime Visualizations:**
-	
-**Average Temperature (F)**
-
-35. **Select** the Line Chart Visual to show the Average Temperature (F).
-
-	![Validate Creds.](media/power-bi-report-048.png)
-
-36. **Select** the field from the visual from the field panel.
-
-37. **Drag /Select** the column name into the fields which is below the visualization panel.
-
-38. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
-
-	![Validate Creds.](media/power-bi-report-049.png)
-	
-	![Validate Creds.](media/power-bi-report-050.png)
-	
-	![Validate Creds.](media/power-bi-report-051.png)
-	
-**Temperature beyond a comfortable level**
-	
-39. **Select** the Area chart Visual to show the Temperature beyond a comfortable level.
-
-	![Validate Creds.](media/power-bi-report-052.png)
-	
-40. **Select** the field from the visual from the field panel.
-
-41. **Drag /Select** the column name into the fields which is below the visualization panel.
-
-42. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
-
-	![Validate Creds.](media/power-bi-report-053.png)
-	
-	![Validate Creds.](media/power-bi-report-054.png)
-	
-	![Validate Creds.](media/power-bi-report-055.png)
-
-43. After putting visuals, **click** on the Save Button.
-
-44. Give the name and **save** it in the same workspace.
+28. After putting visuals, **click** on the Save Button.
 
 	![Validate Creds.](media/power-bi-report-056.png)
+
+29. Give the name and **save** it in the same workspace.
+
+	![Validate Creds.](media/power-bi-report-056-1.png)
 		
 ### Follow these steps to create the Power BI dashboard
 
