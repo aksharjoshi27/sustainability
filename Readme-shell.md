@@ -692,63 +692,63 @@ To hide title and subtitle for all the **images** that you have pined above. Ple
 
 	![Table.](media/power-bi-table-6.png)
 
-42. Here is the list of Dashboards you have to create for Sustainability and the report to migrate to prod environment. You will see the necessary details for the same below. You must refer to the [Excel](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/sustainability/sustainability/Dashboard Mapping.xlsx) file for pinning the tiles to the dashboard.
+41. Here is the list of Dashboards you have to create for Sustainability and the report to migrate to prod environment. You will see the necessary details for the same below. You must refer to the [Excel](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/sustainability/sustainability/Dashboard Mapping.xlsx) file for pinning the tiles to the dashboard.
 
 	![Final Look.](media/power-bi-report-33.png)
 
-43. **Fleet Manager EMS/Police/Fire (Before)** should look like this. Following are the details of tiles for the same.
+42. **Fleet Manager EMS/Police/Fire (Before)** should look like this. Following are the details of tiles for the same.
 
 	![Final Look.](media/power-bi-report-32.png)
 	
-44. **Refer** to this table while pinning rest of the tiles to the dashboard.
+43. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-1.png)
 
-45. **Power Management After** should look like this. Following are the details of tiles for the same.
+44. **Power Management After** should look like this. Following are the details of tiles for the same.
 
 	![Final Look.](media/power-bi-report-34.png)
 	
-46. **Refer** to this table while pinning rest of the tiles to the dashboard.	
+45. **Refer** to this table while pinning rest of the tiles to the dashboard.	
 
-	![Table.](media/power-bi-table-2.png)
+	![Table.](media/power-bi-table-2.png) 
 
-47. **Power Management Before** should look like this. Following are the details of tiles for the same.
+46. **Power Management Before** should look like this. Following are the details of tiles for the same.
 	
 	![Final Look.](media/power-bi-report-35.png)
 	
-48. **Refer** to this table while pinning rest of the tiles to the dashboard.	
+47. **Refer** to this table while pinning rest of the tiles to the dashboard.	
 
 	![Table.](media/power-bi-table-3.png)
 
-49. **Mayor Dashboard After** Dashboard should look like this. 
+48. **Mayor Dashboard After** Dashboard should look like this. 
 
 	![Final Look.](media/power-bi-report-36.png)
 	
-50. **Refer** to this table while pinning rest of the tiles to the dashboard.
+49. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-4.png)
 	
-51. **Mayor Dashboard Before** Dashboard should look like this.
+50. **Mayor Dashboard Before** Dashboard should look like this.
 
 	![Final Look.](media/power-bi-report-37.png)
 	
-52. **Refer** to this table while pinning rest of the tiles to the dashboard.
+51. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-5.png)
 	
-53. **Transportation Head Dashboard (After)** Dashboard should look like this.
+52. **Transportation Head Dashboard (After)** Dashboard should look like this.
 
 	![Final Look.](media/power-bi-report-39.png)
 	
-54. **Refer** to this table while pinning rest of the tiles to the dashboard.
+53. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-7.png)
 	
-55. **Transportation Head Dashboard (Before)** Dashboard should look like this.
+54. **Transportation Head Dashboard (Before)** Dashboard should look like this.
 
 	![Final Look.](media/power-bi-report-40.png)
 
-56. **Refer** to this table while pinning rest of the tiles to the dashboard.
+55. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-8.png)
 	
@@ -780,7 +780,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 8. **Enter** the following path:  
 	
 	```
-	retail/retail/retaildemo-app/wwwroot/config-poc.js
+	sustainability/sustainability/sustainabilitydemo-app/wwwroot/config-poc.js
 	```
 
 9. **Click** Download button.
