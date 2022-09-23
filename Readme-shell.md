@@ -604,11 +604,11 @@ To give permissions for the Power BI reports to access the data sources:
 
 **Follow these steps to pin the report to the Power BI dashboard:**
 
-15. **Search** the report 'Master Images' and then **click** on the report to open it.
+15. **Search** the report 'Fleet Manager Dashboard' and then **click** on the report to open it.
 
 	![Create Dashboard further steps.](media/power-bi-report-12.png)
 
-16. Inside the report 'Master Images' **click** on 'Edit' at the top of the right corner.
+16. Inside the report 'Fleet Manager Dashboard' **click** on 'Edit' at the top of the right corner.
 
 	![Select Pillar 1 before.](media/power-bi-report-13.png)
 
@@ -620,7 +620,7 @@ To give permissions for the Power BI reports to access the data sources:
 
 19. **Select** the 'Existing Dashboard' radio button.
 
-20. **Select** the existing dashboard 'Transportation Head Dashboard (After)' and **click** on the 'Pin' button.
+20. **Select** the existing dashboard 'Fleet Manager EMS/Police/Fire (After)' and **click** on the 'Pin' button.
 
 	![Select Pin to dashboard.](media/power-bi-report-15.png)
 
@@ -628,7 +628,7 @@ To give permissions for the Power BI reports to access the data sources:
 
 	![Pin to dashboard further steps.](media/power-bi-report-16.png)
 	
-22. Similarly, **pin** the tiles for the 'Transportation Head Dashboard' to the Dashboard
+22. Similarly, **pin** the tiles for the 'Fleet Manager EMS/Police/Fire (After)' to the Dashboard
 
 23. **Select** workpace created in [Task 2](#task-2-power-bi-workspace-creation) in the left pane.
 
@@ -648,13 +648,13 @@ To give permissions for the Power BI reports to access the data sources:
 
 	![Hover and Click.](media/power-bi-report-21.png)
 	
-28. Select the ‘Transportation Head Dashboard (After)’ from existing dashboard list and **click** on pin.
+28. Select the ‘Fleet Manager EMS/Police/Fire (After)’ from existing dashboard list and **click** on pin.
 	
 	![Hover and Click.](media/power-bi-report-22.png)
 
 29. Similarly pin rest of the images from different tabs of the ‘Master Images’ report.
 	
-30. **Go back** to the ‘Transportation Head Dashboard (After)’ dashboard.
+30. **Go back** to the ‘Fleet Manager EMS/Police/Fire (After)’ dashboard.
 
 	![Go back to Dashboard.](media/power-bi-report-24.png)
 	
@@ -678,21 +678,17 @@ To hide title and subtitle for all the **images** that you have pined above. Ple
 	
 	![Resize and Rearrange.](media/power-bi-report-27.png)
 	
-37. Similarly pin left image tiles from ‘Master Images’ of chicklets report to the Transportation Head Dashboard (After).
+37. Similarly pin left image tiles from ‘Master Images’ of chicklets report to Fleet Manager EMS/Police/Fire (After).
 
 38. **Resize** and **rearrange** the left images tiles as shown in the screenshot. Resize the KPI tile to 1x2. Resize the Deep Dive to 1x4. Resize the logo to 1x1 size; resize other vertical tiles to 2x1 size.  
 
 	![Resize and Rearrange again.](media/power-bi-report-28.png)
-	
-39. On the Dashboard resize, move the content as needed.
 
-	![Validate Creds.](media/power-bi-report-060.png)
-
-40. The Dashboard **ADX Dashboard** should finally look like this. Table in following row indicates which KPI’s need to be pinned from which report to achieve this final look.
+39. The Dashboard **Fleet Manager EMS/Police/Fire (After)** should finally look like this. Table in following row indicates which KPI’s need to be pinned from which report to achieve this final look.
 	
 	![Final Look.](media/power-bi-report-38.png)
 
-41. **Refer** to this table while pinning rest of the tiles to the dashboard.
+40. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-6.png)
 
