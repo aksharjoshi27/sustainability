@@ -305,16 +305,12 @@ cd ./sustainability/sustainabilitydemo
 17. You will now be prompted to **enter** the resource group name in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure). – 'DDiB-Retail-Lab'.
 
 	![Enter Resource Group name.](media/cloud-shell-14.png)
-	
-18. Now you will be prompted if you have an unlimited video indexer account, **press** enter key.
 
-	![Enter Resource Group name.](media/cloud-shell-15.png)
-
-19. After the complete script has been executed, you get to see the message "--Execution Complete--", now **go to** the Azure Portal and **search** for app services, **click** on each one of the simulator apps.
+18. After the complete script has been executed, you get to see the message "--Execution Complete--", now **go to** the Azure Portal and **search** for app services, **click** on each one of the simulator apps.
 
 	![Enter Resource Group name.](media/cloud-shell-16.png)
 	
-20. **Click** on the browse button for **each one** of the app services once, a new window will appear, **close** the window.
+19. **Click** on the browse button for **each one** of the app services once, a new window will appear, **close** the window.
 
 	![Enter Resource Group name.](media/cloud-shell-17.png)
 	
@@ -627,128 +623,126 @@ To give permissions for the Power BI reports to access the data sources:
 21. Similarly, **pin** the others tiles to the Dashboard
 
 	![Pin to dashboard further steps.](media/power-bi-report-16.png)
-	
-22. Similarly, **pin** the tiles for the 'Fleet Manager EMS/Police/Fire (After)' to the Dashboard
 
-23. **Select** workpace created in [Task 2](#task-2-power-bi-workspace-creation) in the left pane.
+22. **Select** workpace created in [Task 2](#task-2-power-bi-workspace-creation) in the left pane.
 
 	![Select Workspace.](media/power-bi-report-18.png)
 	
-24. **Open** ‘Master Images’ report.
+23. **Open** ‘Master Images’ report.
 
 	![Select Workspace.](media/power-bi-report-19.png)
 	
-25. **Click** on 'Page 2' page.
+24. **Click** on 'Page 2' page.
 
-26. **Click** on Edit.
+25. **Click** on Edit.
 
 	![Click on edit.](media/power-bi-report-20.png)
 	
-27. **Hover** on Deep Dive chicklet and **click** pin button.
+26. **Hover** on Deep Dive chicklet and **click** pin button.
 
 	![Hover and Click.](media/power-bi-report-21.png)
 	
-28. Select the ‘Fleet Manager EMS/Police/Fire (After)’ from existing dashboard list and **click** on pin.
+27. Select the ‘Fleet Manager EMS/Police/Fire (After)’ from existing dashboard list and **click** on pin.
 	
 	![Hover and Click.](media/power-bi-report-22.png)
 
-29. Similarly pin rest of the images from different tabs of the ‘Master Images’ report.
+28. Similarly pin rest of the images from different tabs of the ‘Master Images’ report.
 	
-30. **Go back** to the ‘Fleet Manager EMS/Police/Fire (After)’ dashboard.
+29. **Go back** to the ‘Fleet Manager EMS/Police/Fire (After)’ dashboard.
 
 	![Go back to Dashboard.](media/power-bi-report-24.png)
 	
 To hide title and subtitle for all the **images** that you have pined above. Please do the following:
 
-31. Hover on the chiclet and **Click** on ellipsis ‘More Options’ of the image you selected.
+30. Hover on the chiclet and **Click** on ellipsis ‘More Options’ of the image you selected.
 
-32. **Click** on ‘Edit details’.
+31. **Click** on ‘Edit details’.
 
 	![Click on Edit Details.](media/power-bi-report-25.png)
 	
-33. **Uncheck** ‘Display title and subtitle’.
+32. **Uncheck** ‘Display title and subtitle’.
 
-34. **Click** on ‘Apply’.
+33. **Click** on ‘Apply’.
 
-35. **Repeat** Step 4 to 22 for all image tiles.
+34. **Repeat** Step 4 to 22 for all image tiles.
 
 	![Click apply and repeat.](media/power-bi-report-26.png)
 	
-36. After disabling ‘Display title and subtitle’ for all images, **resize** and **rearrange** the top images tiles as shown in the screenshot. 
+35. After disabling ‘Display title and subtitle’ for all images, **resize** and **rearrange** the top images tiles as shown in the screenshot. 
 	
 	![Resize and Rearrange.](media/power-bi-report-27.png)
 	
-37. Similarly pin left image tiles from ‘Master Images’ of chicklets report to Fleet Manager EMS/Police/Fire (After).
+36. Similarly pin left image tiles from ‘Master Images’ of chicklets report to Fleet Manager EMS/Police/Fire (After).
 
-38. **Resize** and **rearrange** the left images tiles as shown in the screenshot. Resize the KPI tile to 1x2. Resize the Deep Dive to 1x4. Resize the logo to 1x1 size; resize other vertical tiles to 2x1 size.  
+37. **Resize** and **rearrange** the left images tiles as shown in the screenshot. Resize the KPI tile to 1x2. Resize the Deep Dive to 1x4. Resize the logo to 1x1 size; resize other vertical tiles to 2x1 size.  
 
 	![Resize and Rearrange again.](media/power-bi-report-28.png)
 
-39. The Dashboard **Fleet Manager EMS/Police/Fire (After)** should finally look like this. Table in following row indicates which KPI’s need to be pinned from which report to achieve this final look.
+38. The Dashboard **Fleet Manager EMS/Police/Fire (After)** should finally look like this. Table in following row indicates which KPI’s need to be pinned from which report to achieve this final look.
 	
 	![Final Look.](media/power-bi-report-38.png)
 
-40. **Refer** to this table while pinning rest of the tiles to the dashboard.
+39. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-6.png)
 
-41. Here is the list of Dashboards you have to create for Sustainability and the report to migrate to prod environment. You will see the necessary details for the same below. You must refer to the [Excel](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/sustainability/sustainability/Dashboard Mapping.xlsx) file for pinning the tiles to the dashboard.
+40. Here is the list of Dashboards you have to create for Sustainability and the report to migrate to prod environment. You will see the necessary details for the same below. You must refer to the [Excel](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/sustainability/sustainability/Dashboard Mapping.xlsx) file for pinning the tiles to the dashboard.
 
 	![Final Look.](media/power-bi-report-33.png)
 
-42. **Fleet Manager EMS/Police/Fire (Before)** should look like this. Following are the details of tiles for the same.
+41. **Fleet Manager EMS/Police/Fire (Before)** should look like this. Following are the details of tiles for the same.
 
 	![Final Look.](media/power-bi-report-32.png)
 	
-43. **Refer** to this table while pinning rest of the tiles to the dashboard.
+42. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-1.png)
 
-44. **Power Management After** should look like this. Following are the details of tiles for the same.
+43. **Power Management After** should look like this. Following are the details of tiles for the same.
 
 	![Final Look.](media/power-bi-report-34.png)
 	
-45. **Refer** to this table while pinning rest of the tiles to the dashboard.	
+44. **Refer** to this table while pinning rest of the tiles to the dashboard.	
 
 	![Table.](media/power-bi-table-2.png) 
 
-46. **Power Management Before** should look like this. Following are the details of tiles for the same.
+45. **Power Management Before** should look like this. Following are the details of tiles for the same.
 	
 	![Final Look.](media/power-bi-report-35.png)
 	
-47. **Refer** to this table while pinning rest of the tiles to the dashboard.	
+46. **Refer** to this table while pinning rest of the tiles to the dashboard.	
 
 	![Table.](media/power-bi-table-3.png)
 
-48. **Mayor Dashboard After** Dashboard should look like this. 
+47. **Mayor Dashboard After** Dashboard should look like this. 
 
 	![Final Look.](media/power-bi-report-36.png)
 	
-49. **Refer** to this table while pinning rest of the tiles to the dashboard.
+48. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-4.png)
 	
-50. **Mayor Dashboard Before** Dashboard should look like this.
+49. **Mayor Dashboard Before** Dashboard should look like this.
 
 	![Final Look.](media/power-bi-report-37.png)
 	
-51. **Refer** to this table while pinning rest of the tiles to the dashboard.
+50. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-5.png)
 	
-52. **Transportation Head Dashboard (After)** Dashboard should look like this.
+51. **Transportation Head Dashboard (After)** Dashboard should look like this.
 
 	![Final Look.](media/power-bi-report-39.png)
 	
-53. **Refer** to this table while pinning rest of the tiles to the dashboard.
+52. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-7.png)
 	
-54. **Transportation Head Dashboard (Before)** Dashboard should look like this.
+53. **Transportation Head Dashboard (Before)** Dashboard should look like this.
 
 	![Final Look.](media/power-bi-report-40.png)
 
-55. **Refer** to this table while pinning rest of the tiles to the dashboard.
+54. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
 	![Table.](media/power-bi-table-8.png)
 	
