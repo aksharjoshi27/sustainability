@@ -237,7 +237,7 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 4. In the Azure Cloud Shell window, ensure the PowerShell environment is selected and **enter** the following command to clone the repository files.
 Command:
 ```
-git clone -b sustainability https://github.com/microsoft/Azure-Analytics-and-AI-Engagement.git sustainability
+git clone -b sustainability https://daidemos@dev.azure.com/daidemos/Microsoft%20Data%20and%20AI%20DREAM%20Demos%20and%20DDiB/_git/DreamDemoInABox
 ```
 
 ![Git Clone Command to Pull Down the demo Repository.](media/cloud-shell-4.png)
@@ -249,12 +249,12 @@ git clone -b sustainability https://github.com/microsoft/Azure-Analytics-and-AI-
 5. **Execute** the sustainabilitySetup.ps1 script by executing the following command:
 
 ```
-cd ./sustainability/sustainabilitydemo
+cd ./DreamDemoInABox/
 ```
 
 6. Then **run** the PowerShell: 
 ```
-./retailSetup.ps1
+./sustainabilitySetup.ps1
 ```
     
 ![Commands to run the PowerShell Script.](media/cloud-shell-5.png)
