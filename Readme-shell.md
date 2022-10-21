@@ -42,13 +42,13 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
   - [Task 3: Deploy the ARM Template](#task-3-deploy-the-arm-template)
   - [Task 4: Run the Cloud Shell to provision the demo resources](#task-4-run-the-cloud-shell-to-provision-the-demo-resources)
   - [Task 5: Lake Database creation and Pipeline execution](#task-5-lake-database-creation-and-pipeline-execution)
-  - [Task 6: Power BI reports and dashboard creation](#task-6-power-bi-reports-and-dashboard-creation)
+  - [Task 5: Power BI reports and dashboard creation](#task-6-power-bi-reports-and-dashboard-creation)
   	- [Steps to validate the credentials for reports](#steps-to-validate-the-credentials-for-reports)
   	- [Steps to create realtime reports](#steps-to-create-realtime-reports)
   	- [Follow these steps to create the Power BI dashboard](#follow-these-steps-to-create-the-power-bi-dashboard)
   	- [Updating Dashboard and Report Ids in Web app](#updating-dashboard-and-report-ids-in-web-app)
-  - [Task 7: Pause or Resume script](#task-8-pause-or-resume-script)
-  - [Task 8: Clean up resources](#task-9-clean-up-resources)
+  - [Task 6: Pause or Resume script](#task-8-pause-or-resume-script)
+  - [Task 7: Clean up resources](#task-9-clean-up-resources)
 
 <!-- /TOC -->
 
@@ -315,37 +315,7 @@ cd ./DreamDemoInABox/
 	![Enter Resource Group name.](media/cloud-shell-17.png)
 	
       
-### Task 5: Lake Database creation and Pipeline execution
-
-1. **Click** on the synapse resource and **click** on the open synapse studio in the next window.
-
-![Resource.](media/lake-db-pipeline-1.png)
-
-![Workspace.](media/lake-db-pipeline-2.png)
-
-2. **Click** on the data icon on sidebar, then **click** on the "+" sign and then **click** on the Lake database.
-
-![Workspace.](media/lake-db-pipeline-3.png)
-
-3. **Enter** the name of the Lake database and **click** on Publish all.
-
-![Workspace.](media/lake-db-pipeline-4.png)
-
-4. A new window appears, here **click** on Publish.
-
-![Workspace.](media/lake-db-pipeline-7.png)
-
-5. **Click** on the integrate icon on sidebar, **expand** the Pipelines, next **expand** the folder containing the desired pipelines, **click** on the three dots right side of pipeline and then **click** on Open.
-
-![Workspace.](media/lake-db-pipeline-5.png)
-
-6. **Click** on Add trigger and then **click** on Trigger now.
-
-![Workspace.](media/lake-db-pipeline-6.png)
-
-7. Perform the above action with the rest of the pipelines, the desired tables will be created under the newly created Lake database.
-
-### Task 6: Power BI reports and dashboard creation
+### Task 5: Power BI reports and dashboard creation
 
 ### Steps to validate the credentials for reports
 
@@ -844,7 +814,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 	
 > **Note:** The setup for your Dream Demo in a Box is done here and now you can follow the demo script for testing/demoing your environment.
 
-### Task 7: Pause or Resume script
+### Task 6: Pause or Resume script
 
 > **Note:** Please perform these steps after your demo is done and you do not need the environment anymore. Also ensure you Resume the environment before demo if you paused it once. 
  
@@ -893,7 +863,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 	![Enter your choice.](media/authentication-4.png)
 
-### Task 8: Clean up resources
+### Task 7: Clean up resources
 
 > **Note: Perform these steps after your demo is done and you do not need the resources anymore**
 
