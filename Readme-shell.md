@@ -41,13 +41,13 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
   - [Task 2: Power BI Workspace creation](#task-2-power-bi-workspace-creation)
   - [Task 3: Deploy the ARM Template](#task-3-deploy-the-arm-template)
   - [Task 4: Run the Cloud Shell to provision the demo resources](#task-4-run-the-cloud-shell-to-provision-the-demo-resources)
-  - [Task 5: Power BI reports and dashboard creation](#task-6-power-bi-reports-and-dashboard-creation)
+  - [Task 5: Power BI reports and dashboard creation](#task-5-power-bi-reports-and-dashboard-creation)
   	- [Steps to validate the credentials for reports](#steps-to-validate-the-credentials-for-reports)
   	- [Steps to create realtime reports](#steps-to-create-realtime-reports)
   	- [Follow these steps to create the Power BI dashboard](#follow-these-steps-to-create-the-power-bi-dashboard)
   	- [Updating Dashboard and Report Ids in Web app](#updating-dashboard-and-report-ids-in-web-app)
-  - [Task 6: Pause or Resume script](#task-8-pause-or-resume-script)
-  - [Task 7: Clean up resources](#task-9-clean-up-resources)
+  - [Task 6: Pause or Resume script](#task-6-pause-or-resume-script)
+  - [Task 7: Clean up resources](#task-7-clean-up-resources)
 
 <!-- /TOC -->
 
@@ -180,7 +180,7 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 
 1. **Open** this link in a new tab of the same browser that you are currently in: 
 	
-	<a href='https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzure-Analytics-and-AI-Engagement%2Fretail%2Fretaildemo%2Fmain-template.json' target='_blank'><img src='http://azuredeploy.net/deploybutton.png' /></a>
+	<a href='https://portal.azure.com/#create/Microsoft.Template/uri/https://dev.azure.com/daidemos/Microsoft%20Data%20and%20AI%20DREAM%20Demos%20and%20DDiB/_git/DreamDemoInABox?path=/main-template.json' target='_blank'><img src='http://azuredeploy.net/deploybutton.png' /></a>
 
 2. On the Custom deployment form, **select** your desired Subscription.
 
@@ -196,22 +196,22 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 
 8. **Click** ‘Review + Create’ button.
 
-	![The Custom deployment form is displayed with example data populated.](media/powerbi-deployment-1.png)
+	![The Custom deployment form is displayed with example data populated.](media/microsoft-template-1.png)
 
 
 9. **Click** the **Create** button once the template has been validated.
 
-	![Creating the template after validation.](media/powerbi-deployment-3.png)
+	![Creating the template after validation.](media/microsoft-template-2.png)
 	
 	> **NOTE:** The provisioning of your deployment resources will take approximately 10 minutes.
 	
 10. **Stay** on the same page and wait for the deployment to complete.
     
-	![A portion of the Azure Portal to confirm that the deployment is in progress.](media/microsoft-template.png)
+	![A portion of the Azure Portal to confirm that the deployment is in progress.](media/microsoft-template-3.png)
     
 11. **Select** the **Go to resource group** button once your deployment is complete.
 
-	![A portion of the Azure Portal to confirm that the deployment is in progress.](media/microsoft-template-2.png)
+	![A portion of the Azure Portal to confirm that the deployment is in progress.](media/microsoft-template-4.png)
 
 ### Task 4: Run the Cloud Shell to provision the demo resources
 
@@ -223,23 +223,23 @@ THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTION
 
 2. **Click** on 'Show advanced settings'.
 
-	![Mount a Storage for running the Cloud Shell.](media/cloud-shell-2.png)
+	![Mount a Storage for running the Cloud Shell.](media/cloud-shell-02.png)
 
 	> **Note:** If you already have a storage mounted for Cloud Shell, you will not get this prompt. In that case, skip step 2 and 3.
 
 3. **Select** your 'Resource Group' and **enter** the 'Storage account' and 'File share' name.
 
-	![Mount a storage for running the Cloud Shell and Enter the Details.](media/cloud-shell-3.png)
+	![Mount a storage for running the Cloud Shell and Enter the Details.](media/cloud-shell-03.png)
 
 	> **Note:** If you are creating a new storage account, give it a unique name with no special characters or uppercase letters.
 
 4. In the Azure Cloud Shell window, ensure the PowerShell environment is selected and **enter** the following command to clone the repository files.
 Command:
 ```
-git clone -b sustainability https://daidemos@dev.azure.com/daidemos/Microsoft%20Data%20and%20AI%20DREAM%20Demos%20and%20DDiB/_git/DreamDemoInABox
+git clone -b sustainability https://daidemos@dev.azure.com/daidemos/Microsoft%20Data%20and%20AI%20DREAM%20Demos%20and%20DDiB/_git/DreamDemoInABox sustainability
 ```
 
-![Git Clone Command to Pull Down the demo Repository.](media/cloud-shell-4.png)
+![Git Clone Command to Pull Down the demo Repository.](media/cloud-shell-04.png)
 	
 > **Note:** If you get File already exist error, please execute following command: rm sustainability -r -f to delete existing clone.
 
@@ -248,7 +248,7 @@ git clone -b sustainability https://daidemos@dev.azure.com/daidemos/Microsoft%20
 5. **Execute** the sustainabilitySetup.ps1 script by executing the following command:
 
 ```
-cd ./DreamDemoInABox/
+cd ./sustainability/
 ```
 
 6. Then **run** the PowerShell: 
@@ -256,37 +256,37 @@ cd ./DreamDemoInABox/
 ./sustainabilitySetup.ps1
 ```
     
-![Commands to run the PowerShell Script.](media/cloud-shell-5.png)
+![Commands to run the PowerShell Script.](media/cloud-shell-05.png)
 
 7. You will see the below screen, **enter** 'Y' and **press** the enter key.
 
-	![Commands to run the PowerShell Script.](media/cloud-shell-18.png)
+	![Commands to run the PowerShell Script.](media/cloud-shell-06.png)
       
 8. From the Azure Cloud Shell, **copy** the authentication code
 
-9. Click on the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
+9. Copy the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
 
-	![Authentication link and Device Code.](media/cloud-shell-6.png)
+	![Authentication link and Device Code.](media/cloud-shell-07.png)
      
 10. **Paste** the authentication code and **click** on Next.
 
-	![New Browser Window to provide the Authentication Code.](media/cloud-shell-7.png)
+	![New Browser Window to provide the Authentication Code.](media/cloud-shell-08.png)
 
 11. **Select** the same user that you used for signing in to the Azure Portal in [Task 1](#task-1-create-a-resource-group-in-azure).
 
-	![Select the User Account which you want to Authenticate.](media/cloud-shell-8.png)
+	![Select the User Account which you want to Authenticate.](media/cloud-shell-09.png)
 	
 12. In the below screen **click** on continue.
 
-	![Authentication done.](media/cloud-shell-20.png)
+	![Authentication done.](media/cloud-shell-10.png)
 
 13. **Close** the browser tab once you see the message window at right and **go back** to your Azure Cloud Shell execution window.
 
-	![Authentication done.](media/cloud-shell-9.png)
+	![Authentication done.](media/cloud-shell-11.png)
 	
 14. You will see the below screen and perform step #9 to step #13 again.
 
-	![Authentication done.](media/cloud-shell-21.png)
+	![Authentication done.](media/cloud-shell-12.png)
 
 15. Now you will be prompted to select subscription if you have multiple subscription assigned to the user you used for device login.
 
@@ -299,94 +299,88 @@ cd ./DreamDemoInABox/
 
 16. You will be asked to confirm for the subscription, **enter** 'Y' and **press** the enter key.
 
-	![Commands to run the PowerShell Script.](media/cloud-shell-19.png)
+	![Commands to run the PowerShell Script.](media/cloud-shell-13.png)
 
 17. You will now be prompted to **enter** the resource group name in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure). – 'DDiB-Retail-Lab'.
 
 	![Enter Resource Group name.](media/cloud-shell-14.png)
 
-18. After the complete script has been executed, you get to see the message "--Execution Complete--", now **go to** the Azure Portal and **search** for app services, **click** on each one of the simulator apps.
+18. After the complete script has been executed, you get to see the message "--Execution Complete--", now **go to** the Azure Portal and **search** for app services, **click** on each one of the simulator apps. Here there are two simulator apps.
 
-	![Enter Resource Group name.](media/cloud-shell-16.png)
+	![Enter Resource Group name.](media/cloud-shell-15.png)
 	
 19. **Click** on the browse button for **each one** of the app services once, a new window will appear, **close** the window.
 
-	![Enter Resource Group name.](media/cloud-shell-17.png)
+	![Enter Resource Group name.](media/cloud-shell-16.png)
 	
-      
+
 ### Task 5: Power BI reports and dashboard creation
 
 ### Steps to validate the credentials for reports
 
 1. **Open** Power BI and **Select** the Workspace, which is created in [Task 2](#task-2-power-bi-workspace-creation).
 	
-	![Select Workspace.](media/power-bi-report-3.png)
+	![Select Workspace.](media/power-bi-report-1.png)
 	
 Once [Task 4](#task-4-run-the-cloud-shell-to-provision-the-demo-resources) has been completed successfully and the template has been deployed, you will be able to see a set of reports in the Reports tab of Power BI, and real-time datasets in the Dataset tab. 
 
 The image on the below shows the Reports tab in Power BI.  We can create a Power BI dashboard by pinning visuals from these reports.
 
-![Reports Tab.](media/power-bi-report-4.png)
+![Reports Tab.](media/power-bi-report-2.png)
 	
 > **Note:** If you do not see this list in your workspace after script execution, it may indicate that something went wrong during execution. You may use the subscript to patch it or manually upload the reports from this location and changing their parameters appropriately before authentication.
 
 To give permissions for the Power BI reports to access the data sources:
 
-2. **Click** the ellipses or settings icon on top right-side corner.
+2. **Click** the 'Datasets + dataflows'.
 
-3. **Click** the settings dropdown.
+3. **Click** on the settings icon infront of any of the report.
 
-4. **Click** on settings.
-
-	![Permission.](media/power-bi-report-5.png)
-
-5. **Click** on ‘Datasets’ tab.
+	![Permission.](media/power-bi-report-3.png)
 	
-	![Dataset.](media/power-bi-report-6.png)
-	
-6. **Click** on the Budget dashboard.
+4. **Click** on the Budget dashboard.
 
-7. **Expand** Data source credentials.
+5. **Expand** Data source credentials.
 
-8. **Click** Edit credentials and a dialogue box will pop up.
+6. **Click** Edit credentials and a dialogue box will pop up.
 
-	![Data Source Creds.](media/power-bi-report-7.png)
+	![Data Source Creds.](media/power-bi-report-4.png)
 
 > **Note:** Verify the server name has been updated to your current sql pool name for all the datasets. If not, update the same under parameters section and click apply.
 
-9. **Enter** Username as ‘labsqladmin’.
+7. **Enter** Username as ‘labsqladmin’.
 
-10. **Enter** the same SQL Administrator login password that was created for [Task 3](#task-3-deploy-the-arm-template) Step #5.
+8. **Enter** the same SQL Administrator login password that was created for [Task 3](#task-3-deploy-the-arm-template) Step #5.
 
-11. **Click** on Sign in.
+9. **Click** on Sign in.
 
-	![Validate Creds.](media/power-bi-report-8.png)
+	![Validate Creds.](media/power-bi-report-5.png)
 	
-12. **Click** on the Demand and Bus Frequency.
+10. **Click** on the Demand and Bus Frequency.
 
-13. **Expand** Data source credentials.
+11. **Expand** Data source credentials.
 
-14. **Click** Edit credentials in front of DocumentDB and a dialogue box will pop up.
+12. **Click** Edit credentials in front of DocumentDB and a dialogue box will pop up.
 
-	![Data Source Creds.](media/power-bi-report-06.png)
+	![Data Source Creds.](media/power-bi-report-6.png)
 
-15. Go to the Azure Portal and under resources search for "cosmos" and **click** on the cosmos resource, the resource window opens.
+13. Go to the Azure Portal and under resources search for "cosmos" and **click** on the cosmos resource, the resource window opens.
 
-	![Data Source Creds.](media/power-bi-report-07.png)
+	![Data Source Creds.](media/power-bi-report-7.png)
 
-16. Under the Settings section **select** keys and **copy** the primary key of the cosmos resource.
+14. Under the Settings section **select** keys and **copy** the primary key of the cosmos resource.
 
-	![Data Source Creds.](media/power-bi-report-08.png)
+	![Data Source Creds.](media/power-bi-report-8.png)
 	
-17. Keeping the "Authentication method" as "Key", **paste** the "Account key" from step #16 and **click** on Sign in.
+15. Keeping the "Authentication method" as "Key", **paste** the "Account key" from step #16 and **click** on Sign in.
 
-	![Validate Creds.](media/power-bi-report-09.png)
+	![Validate Creds.](media/power-bi-report-9.png)
 		
 ### Steps to create realtime reports
 
 1.	**Click** on the three dots in front of the “Realtime Air Quality API” dataset and **click** on Create report, a new report will be created.
 
-	![Validate Creds.](media/power-bi-report-014.png)
+	![Validate Creds.](media/power-bi-report-10.png)
 
 **Realtime Air Quality API Realtime Visualizations:**
 
@@ -394,7 +388,7 @@ To give permissions for the Power BI reports to access the data sources:
 
 2. **Select** the KPI visual from “Visualizations”.
 
-	![Validate Creds.](media/power-bi-report-015.png)
+	![Validate Creds.](media/power-bi-report-11.png)
 
 3. **Select** the field from the visual from the field panel.
 
@@ -402,73 +396,73 @@ To give permissions for the Power BI reports to access the data sources:
 	
 5. Select Page Level Filter in Filter pane.
 
-	![Validate Creds.](media/power-bi-report-016.png)
+	![Validate Creds.](media/power-bi-report-12.png)
 	
 6. Drag the “ReadingDateTimeUTC”, column to “Filters on this page” in filter pane.
 
-	![Validate Creds.](media/power-bi-report-062.png)
+	![Validate Creds.](media/power-bi-report-13.png)
 
 7. Select filter Type as “Relative Time”. In “Show items when the value” options, select “Is in the last”, “1” & “minute”. 
 
-	![Validate Creds.](media/power-bi-report-017.png)
+	![Validate Creds.](media/power-bi-report-14.png)
 	
 9. Select Apply Filter.
 
-	![Validate Creds.](media/power-bi-report-018.png)
+	![Validate Creds.](media/power-bi-report-15.png)
 
 **PM1**
 
 10. **Select** the KPI for the next visual. 
 
-	![Validate Creds.](media/power-bi-report-019.png)
+	![Validate Creds.](media/power-bi-report-16.png)
 
 11. **Select** the required field column for the visual.
 
 12. **Drag /Select** the column name into the fields which is below the visualization panel.
 
-	![Validate Creds.](media/power-bi-report-020.png)
+	![Validate Creds.](media/power-bi-report-17.png)
 	
-	![Validate Creds.](media/power-bi-report-021.png)
+	![Validate Creds.](media/power-bi-report-18.png)
 	
-	![Validate Creds.](media/power-bi-report-022.png)
+	![Validate Creds.](media/power-bi-report-19.png)
 	
 **PM10**
 
 13. **Select** the KPI to show the PM10 Visual.
 
-	![Validate Creds.](media/power-bi-report-023.png)
+	![Validate Creds.](media/power-bi-report-20.png)
 
 14. **Select** the field from the visual from the field panel.
 
 15. **Drag /Select** the column name into the fields which is below the visualization panel.
 
-	![Validate Creds.](media/power-bi-report-024.png)
+	![Validate Creds.](media/power-bi-report-21.png)
 	
-	![Validate Creds.](media/power-bi-report-025.png)
+	![Validate Creds.](media/power-bi-report-22.png)
 	
-	![Validate Creds.](media/power-bi-report-026.png)
+	![Validate Creds.](media/power-bi-report-23.png)
 
 **PM25**
 	
 16. **Select** the KPI for showing the PM25 visual.
 
-	![Validate Creds.](media/power-bi-report-027.png)
+	![Validate Creds.](media/power-bi-report-24.png)
 
 17. **Select** the field from the visual from the field panel.
 
 18. **Drag /Select** the column name into the fields which is below the visualization panel.
 
-	![Validate Creds.](media/power-bi-report-028.png)
+	![Validate Creds.](media/power-bi-report-25.png)
 	
-	![Validate Creds.](media/power-bi-report-029.png)
+	![Validate Creds.](media/power-bi-report-26.png)
 	
-	![Validate Creds.](media/power-bi-report-030.png)
+	![Validate Creds.](media/power-bi-report-27.png)
 	
 **AQI trend in this Hour**
 
 17. **Select** the Line chart to show the AQI Trend.
 
-	![Validate Creds.](media/power-bi-report-031.png)
+	![Validate Creds.](media/power-bi-report-28.png)
 
 18. **Select** the field from the visual from the field panel.
 
@@ -476,23 +470,23 @@ To give permissions for the Power BI reports to access the data sources:
 
 20. For showing the average values **click** on the dropdown arrow in the value section field and **select** the Average.
 
-	![Validate Creds.](media/power-bi-report-032.png)
+	![Validate Creds.](media/power-bi-report-29.png)
 	
-	![Validate Creds.](media/power-bi-report-033.png)
+	![Validate Creds.](media/power-bi-report-30.png)
 	
 21. **Select** Further Analysis tab in the Visualization Pane. **Select** “Average Line”. Add one average line by clicking on “+ Add Line”.
 	
-	![Validate Creds.](media/power-bi-report-034.png)
+	![Validate Creds.](media/power-bi-report-31.png)
 
 22. **Position** the visual in the report.
 
-	![Validate Creds.](media/power-bi-report-034-1.png)
+	![Validate Creds.](media/power-bi-report-32.png)
 
 **PM 2.5 Trend in this Hour**
 	
 21. **Select** the Line chart to show the PM2.5 Trend.
 
-	![Validate Creds.](media/power-bi-report-035.png)
+	![Validate Creds.](media/power-bi-report-33.png)
 	
 22. **Select** the field from the visual from the field panel.
 
@@ -500,43 +494,43 @@ To give permissions for the Power BI reports to access the data sources:
 
 24. For showing the average values **click** on the dropdown arrow in the value section field and select the Average.
 
-	![Validate Creds.](media/power-bi-report-036.png)
+	![Validate Creds.](media/power-bi-report-34.png)
 	
-	![Validate Creds.](media/power-bi-report-037.png)
+	![Validate Creds.](media/power-bi-report-35.png)
 	
 25. Select Further Analysis tab in the Visualization Pane. **Select** "Average Line". **Add** one average line by clicking on “+ Add Line”. 
 
 26. **Drag / Select** the column name “Mean_PM25” in series option. 
 	
-	![Validate Creds.](media/power-bi-report-038.png)
+	![Validate Creds.](media/power-bi-report-36.png)
 
 27. Position the visual in the report.
 
-	![Validate Creds.](media/power-bi-report-038-1.png)
+	![Validate Creds.](media/power-bi-report-37.png)
 	
 28. After putting visuals, **click** on the Save Button.
 
-	![Validate Creds.](media/power-bi-report-056.png)
+	![Validate Creds.](media/power-bi-report-38.png)
 
 29. Give the name and **save** it in the same workspace.
 
-	![Validate Creds.](media/power-bi-report-056-1.png)
+	![Validate Creds.](media/power-bi-report-39.png)
 		
 ### Follow these steps to create the Power BI dashboard
 
 1. **Select** the workspace created in [Task 2](#task-2-power-bi-workspace-creation).
 
-	![Select Workspace.](media/power-bi-report-9.png)
+	![Select Workspace.](media/power-bi-report-40.png)
 	
 2. **Click** on ‘+ New’ button on the top-right navigation bar.
 
 3. **Click** the ‘Dashboard’ option from the drop-down menu.
 
-      ![New Dashboard.](media/power-bi-report-10.png)
+      ![New Dashboard.](media/power-bi-report-41.png)
 
 4. **Name** the dashboard 'Fleet Manager EMS/Police/Fire (After)' and **click** 'create'.
 
-	![Create Dashboard further steps.](media/power-bi-report-11.png)
+	![Create Dashboard further steps.](media/power-bi-report-42.png)
 
 5. This new dashboard will appear in the 'Dashboard' section of the Power BI workspace.
 
@@ -571,15 +565,15 @@ To give permissions for the Power BI reports to access the data sources:
 
 15. **Search** the report 'Fleet Manager Dashboard' and then **click** on the report to open it.
 
-	![Create Dashboard further steps.](media/power-bi-report-12.png)
+	![Create Dashboard further steps.](media/power-bi-report-43.png)
 
 16. Inside the report 'Fleet Manager Dashboard' **click** on 'Edit' at the top of the right corner.
 
-	![Select Pillar 1 before.](media/power-bi-report-13.png)
+	![Select Pillar 1 before.](media/power-bi-report-44.png)
 
 17. **Click** over the tile and **click** on the icon to 'Pin to dashboard'.
 
-	![Select Pillar 1 before.](media/power-bi-report-14.png)	
+	![Select Pillar 1 before.](media/power-bi-report-45.png)	
 
 18. 'Pin to dashboard' window will appear.
 
@@ -587,39 +581,39 @@ To give permissions for the Power BI reports to access the data sources:
 
 20. **Select** the existing dashboard 'Fleet Manager EMS/Police/Fire (After)' and **click** on the 'Pin' button.
 
-	![Select Pin to dashboard.](media/power-bi-report-15.png)
+	![Select Pin to dashboard.](media/power-bi-report-46.png)
 
 21. Similarly, **pin** the others tiles to the Dashboard
 
-	![Pin to dashboard further steps.](media/power-bi-report-16.png)
+	![Pin to dashboard further steps.](media/power-bi-report-47.png)
 
 22. **Select** workpace created in [Task 2](#task-2-power-bi-workspace-creation) in the left pane.
 
-	![Select Workspace.](media/power-bi-report-18.png)
+	![Select Workspace.](media/power-bi-report-48.png)
 	
 23. **Open** ‘Master Images’ report.
 
-	![Select Workspace.](media/power-bi-report-19.png)
+	![Select Workspace.](media/power-bi-report-49.png)
 	
 24. **Click** on 'Page 2' page.
 
 25. **Click** on Edit.
 
-	![Click on edit.](media/power-bi-report-20.png)
+	![Click on edit.](media/power-bi-report-50.png)
 	
 26. **Hover** on Deep Dive chicklet and **click** pin button.
 
-	![Hover and Click.](media/power-bi-report-21.png)
+	![Hover and Click.](media/power-bi-report-51.png)
 	
 27. Select the ‘Fleet Manager EMS/Police/Fire (After)’ from existing dashboard list and **click** on pin.
 	
-	![Hover and Click.](media/power-bi-report-22.png)
+	![Hover and Click.](media/power-bi-report-52.png)
 
 28. Similarly pin rest of the images from different tabs of the ‘Master Images’ report.
 	
 29. **Go back** to the ‘Fleet Manager EMS/Police/Fire (After)’ dashboard.
 
-	![Go back to Dashboard.](media/power-bi-report-24.png)
+	![Go back to Dashboard.](media/power-bi-report-53.png)
 	
 To hide title and subtitle for all the **images** that you have pined above. Please do the following:
 
@@ -627,7 +621,7 @@ To hide title and subtitle for all the **images** that you have pined above. Ple
 
 31. **Click** on ‘Edit details’.
 
-	![Click on Edit Details.](media/power-bi-report-25.png)
+	![Click on Edit Details.](media/power-bi-report-54.png)
 	
 32. **Uncheck** ‘Display title and subtitle’.
 
@@ -635,73 +629,73 @@ To hide title and subtitle for all the **images** that you have pined above. Ple
 
 34. **Repeat** Step 4 to 22 for all image tiles.
 
-	![Click apply and repeat.](media/power-bi-report-26.png)
+	![Click apply and repeat.](media/power-bi-report-55.png)
 	
 35. After disabling ‘Display title and subtitle’ for all images, **resize** and **rearrange** the top images tiles as shown in the screenshot. 
 	
-	![Resize and Rearrange.](media/power-bi-report-27.png)
+	![Resize and Rearrange.](media/power-bi-report-56.png)
 	
 36. Similarly pin left image tiles from ‘Master Images’ of chicklets report to Fleet Manager EMS/Police/Fire (After).
 
 37. **Resize** and **rearrange** the left images tiles as shown in the screenshot. Resize the KPI tile to 1x2. Resize the Deep Dive to 1x4. Resize the logo to 1x1 size; resize other vertical tiles to 2x1 size.  
 
-	![Resize and Rearrange again.](media/power-bi-report-28.png)
+	![Resize and Rearrange again.](media/power-bi-report-57.png)
 
 38. The Dashboard **Fleet Manager EMS/Police/Fire (After)** should finally look like this. Table in following row indicates which KPI’s need to be pinned from which report to achieve this final look.
 	
-	![Final Look.](media/power-bi-report-38.png)
+	![Final Look.](media/power-bi-report-58.png)
 
 39. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
-	![Table.](media/power-bi-table-6.png)
+	![Table.](media/power-bi-table-1.png)
 
-40. Here is the list of Dashboards you have to create for Sustainability and the report to migrate to prod environment. You will see the necessary details for the same below. You must refer to the [Excel](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/sustainability/sustainability/Dashboard Mapping.xlsx) file for pinning the tiles to the dashboard.
+40. Here is the list of Dashboards you have to create for Sustainability and the report to migrate to prod environment. You will see the necessary details for the same below. You must refer to the [Excel](https://dev.azure.com/daidemos/Microsoft%20Data%20and%20AI%20DREAM%20Demos%20and%20DDiB/_git/DreamDemoInABox?path=/Dashboard%20Mapping2.xlsx) file for pinning the tiles to the dashboard.
 
-	![Final Look.](media/power-bi-report-33.png)
+	![Final Look.](media/power-bi-report-59.png)
 
 41. **Fleet Manager EMS/Police/Fire (Before)** should look like this. Following are the details of tiles for the same.
 
-	![Final Look.](media/power-bi-report-32.png)
+	![Final Look.](media/power-bi-report-60.png)
 	
 42. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
-	![Table.](media/power-bi-table-1.png)
+	![Table.](media/power-bi-table-2.png)
 
 43. **Power Management After** should look like this. Following are the details of tiles for the same.
 
-	![Final Look.](media/power-bi-report-34.png)
+	![Final Look.](media/power-bi-report-61.png)
 	
 44. **Refer** to this table while pinning rest of the tiles to the dashboard.	
 
-	![Table.](media/power-bi-table-2.png) 
+	![Table.](media/power-bi-table-3.png) 
 
 45. **Power Management Before** should look like this. Following are the details of tiles for the same.
 	
-	![Final Look.](media/power-bi-report-35.png)
+	![Final Look.](media/power-bi-report-62.png)
 	
 46. **Refer** to this table while pinning rest of the tiles to the dashboard.	
 
-	![Table.](media/power-bi-table-3.png)
+	![Table.](media/power-bi-table-4.png)
 
 47. **Mayor Dashboard After** Dashboard should look like this. 
 
-	![Final Look.](media/power-bi-report-36.png)
+	![Final Look.](media/power-bi-report-63.png)
 	
 48. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
-	![Table.](media/power-bi-table-4.png)
+	![Table.](media/power-bi-table-5.png)
 	
 49. **Mayor Dashboard Before** Dashboard should look like this.
 
-	![Final Look.](media/power-bi-report-37.png)
+	![Final Look.](media/power-bi-report-64.png)
 	
 50. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
-	![Table.](media/power-bi-table-5.png)
+	![Table.](media/power-bi-table-6.png)
 	
 51. **Transportation Head Dashboard (After)** Dashboard should look like this.
 
-	![Final Look.](media/power-bi-report-39.png)
+	![Final Look.](media/power-bi-report-65.png)
 	
 52. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
@@ -709,7 +703,7 @@ To hide title and subtitle for all the **images** that you have pined above. Ple
 	
 53. **Transportation Head Dashboard (Before)** Dashboard should look like this.
 
-	![Final Look.](media/power-bi-report-40.png)
+	![Final Look.](media/power-bi-report-66.png)
 
 54. **Refer** to this table while pinning rest of the tiles to the dashboard.
 
@@ -724,17 +718,17 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 2. **Click** on one of the dashboards you created. Eg. ADX Dashboard.
 
-	![Navigate and Click.](media/power-bi-report-24.png)
+	![Navigate and Click.](media/power-bi-report-67.png)
 
 3. **Copy** the dashboard id from the url bar at the top.
 	
-	![Copy the dashboard id.](media/updating-powerbi-2.png)
+	![Copy the dashboard id.](media/updating-powerbi-1.png)
 
 4. **Navigate** to azure portal.
 
 5. **Open** the Azure Cloud Shell by selecting its icon from the top toolbar.
 
-	![Navigate and Open.](media/updating-powerbi-3.png)
+	![Navigate and Open.](media/updating-powerbi-2.png)
 
 6. **Click** on upload/download button.
 
@@ -743,69 +737,82 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 8. **Enter** the following path:  
 	
 	```
-	sustainability/sustainability/sustainabilitydemo-app/wwwroot/config-poc.js
+	sustainability/app-sustainabilitydemo/wwwroot/config-poc.js
 	```
 
 9. **Click** Download button.
 
-	![Enter path and Click download button.](media/updating-powerbi-4.png)
+	![Enter path and Click download button.](media/updating-powerbi-3.png)
 	
 10. At the right bottom of the cloudshell screen you get a hyperlink, **click** on it.
 
-	![Enter path and Click download button.](media/updating-powerbi-12.png)
+	![Enter path and Click download button.](media/updating-powerbi-4.png)
 
 11. **Edit** the downloaded file in notepad.
 
-12. **Paste** the dashboard id you copied earlier between the double quotes of key ‘CEO Dashboard - May’.
+12. **Paste** the dashboard id you copied earlier between the double quotes of key ‘FleetManagementM18DashboardID’.
 
-13. **Save** the changes to the file.
+13. Similarly repeat step #12 according to the following mapping:
+
+	| Key                       		   	| Type     									|
+	|---------------------------------------|-------------------------------------------|
+	| MayorDashboardBeforeID				| Mayor Dashboard Before   					|
+	| TransportationHeadDashboardM6ID		| Transportation Head Dashboard (Before)   	|
+	| TransportationHeadDashboardM24ID  	| Transportation Head Dashboard (After)   	|
+	| FleetManagementM6DashboardID  		| Fleet Manager EMS/Police/Fire (Before)   	|
+	| FleetManagementM18DashboardID  		| Fleet Manager EMS/Police/Fire (After) 	|
+	| PowerManagementBeforeDashboardID  	| Power Management Before   				|
+	| PowerManagementAfterDashboardID  		| Power Management After   					|
+	| MayorDashboardM24ID  					| Mayor Dashboard After   					|	
+
+14. **Save** the changes to the file.
 
 	![Edit paste and save.](media/updating-powerbi-5.png)
 
-14. **Navigate** to azure portal.
+15. **Navigate** to azure portal.
 
-15. **Open** the Azure Cloud Shell by selecting its icon from the top toolbar.
+16. **Open** the Azure Cloud Shell by selecting its icon from the top toolbar.
 
 	![Navigate and Open.](media/updating-powerbi-6.png)
 
-16. **Click** upload/download button.
+17. **Click** upload/download button.
 
-17. **Click** upload.
+18. **Click** upload.
 
-18. **Select** the config-poc.js file you just updated.
+19. **Select** the config-poc.js file you just updated.
 
-19. **Click** open.
+20. **Click** open.
 
 	![Select and Click open.](media/updating-powerbi-7.png)
 
-20. **Execute** the following command in cloudshell:  
+21. **Execute** the following command in cloudshell:  
 	
 	```
-	cp config-poc.js ./retail/retail/retaildemo-app/wwwroot
+	cp config-poc.js ./sustainability/app-sustainabilitydemo/wwwroot/
 	```
 	
 	![Execute the command.](media/updating-powerbi-8.png)
 
-21.	**Execute** the following command in cloudshell: 
+22.	**Execute** the following command in cloudshell: 
 	
 	```
-	cd retail/retail/subscripts 
+	cd ./sustainability/subscripts 
 	./updateWebAppSubScript.ps1
 	```
 	
 	![Execute the command.](media/updating-powerbi-9.png)
 
-22. From the Azure Cloud Shell, **copy** the authentication code. 
+23. From the Azure Cloud Shell, **copy** the authentication code. 
 
-23. **Click** on the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
+24. **Click** on the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
 
 	![Copy and Click on Link.](media/updating-powerbi-10.png)
 
-24. **Paste** the authentication code.
+25. **Paste** the authentication code.
 
-25. **Select** appropriate username when prompted.
+26. **Select** appropriate username when prompted.
 
-26. Wait for the script execution to complete.
+27. Wait for the script execution to complete.
 
 	![Paste select and wait.](media/updating-powerbi-11.png)
 
@@ -821,12 +828,12 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 2. **Click** on the Azure Cloud Shell icon from the top toolbar. 
 
-	![Open and Click on Azure Cloud Shell.](media/fintax-poc.png)
+	![Open and Click on Azure Cloud Shell.](media/cloud-shell.png)
 
 **Execute** the Pause_Resume_script.ps1 script by executing the following command: 
 1. **Run** Command: 
 	```
-	cd "sustainability\sustainabilitydemo"
+	cd "./sustainability"
 	```
 
 2. Then **run** the PowerShell script: 
@@ -834,7 +841,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 	./pause_resume_script.ps1 
 	```
 	
-	![Run the Powershell Script.](media/powershell.png)
+	![Run the Powershell Script.](media/powershell-1.png)
 	
 3. From the Azure Cloud Shell, **copy** the authentication code
 	
@@ -876,7 +883,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 2. **Run** Command: 
 	```
-	cd "sustainability\sustainabilitydemo"
+	cd "./sustainability"
 	```
 
 3. Then **run** the PowerShell script: 
@@ -886,7 +893,7 @@ By default, the web app will be provisioned with Gif placeholders for web app sc
 
 	![Run the Powershell Script.](media/authentication-6.png)
 
-4. You will now be prompted to **enter** the resource group name to be deleted in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure) - 'DDib-Sustainability'.
+4. You will now be prompted to **enter** the resource group name to be deleted in the Azure Cloud Shell. Type the same resource group name that you created in [Task 1](#task-1-create-a-resource-group-in-azure) - 'DDiB-Sustainability-Lab'.
 
 5. You may be prompted to select a subscription in case your account has multiple subscriptions.
 
